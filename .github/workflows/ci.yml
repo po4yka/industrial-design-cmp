@@ -23,7 +23,7 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
 
       - name: Assemble library
         run: ./gradlew :library:assemble :library:compileKotlinMetadata --stacktrace --no-daemon
@@ -60,7 +60,7 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
 
       - name: Link iOS simulator framework
         run: ./gradlew :library:linkDebugFrameworkIosSimulatorArm64 --stacktrace --no-daemon
