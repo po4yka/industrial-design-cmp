@@ -32,8 +32,9 @@ coordinated release.
 - Commons unit tests: token stability, motion contracts, segmented-progress smoke paths, button click handling
 - Gradle task `:library:exportTokens` — emits `build/tokens/tokens.json` (Style Dictionary format) for Figma round-tripping
 
-### Changed
-- Nothing yet — pre-release branch, no stable API exists to change
+### Changed (breaking)
+- Publish coordinate migrated from JitPack to Maven Central. New coordinate: `io.github.po4yka:industrial-design-cmp:<version>`. Legacy `com.github.po4yka.industrial-design-cmp:library:<tag>` still resolves for tags ≤ 0.1.0 — consumers pinning to the next release must update their dependency declaration.
+- Publishing Gradle plugin swapped from `maven-publish` to `com.vanniktech.maven.publish` (0.36.0). See [ADR 0003](docs/adr/0003-maven-central-publishing.md) and [`docs/publishing.md`](docs/publishing.md).
 
 ---
 

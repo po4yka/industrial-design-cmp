@@ -5,10 +5,10 @@ plugins {
     alias(libs.plugins.android.kmp.library)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
-    `maven-publish`
+    alias(libs.plugins.vanniktech.maven.publish)
 }
 
-group = "com.github.po4yka.industrial-design-cmp"
+group = "io.github.po4yka"
 version = "0.1.0"
 
 kotlin {
@@ -55,6 +55,64 @@ kotlin {
 compose.resources {
     publicResClass = true
     packageOfResClass = "com.po4yka.industrialdesign.resources"
+}
+
+// --- Publishing --------------------------------------------------------------
+// Maven Central via the Sonatype Central Portal. JitPack continues to work in
+// parallel because it consumes the same maven-publish publications.
+// Credentials are supplied by Gradle properties or ORG_GRADLE_PROJECT_* env vars
+// (see docs/publishing.md). Local dev can use `./gradlew publishToMavenLocal`
+// without any secrets.
+mavenPublishing {
+    // 0.30+ publishes to the Central Portal by default; pass `automaticRelease = true`
+    // to promote straight out of staging, otherwise artifacts wait for manual release.
+    publishToMavenCentral(automaticRelease = false)
+
+    // Sign only when an in-memory key is provided (CI publish). publishToMavenLocal
+    // and builds without credentials skip signing entirely.
+    val hasSigningKey = providers.gradleProperty("signingInMemoryKey").isPresent ||
+        providers.environmentVariable("ORG_GRADLE_PROJECT_signingInMemoryKey").isPresent
+    if (hasSigningKey) {
+        signAllPublications()
+    }
+
+    coordinates(
+        groupId = project.group.toString(),
+        artifactId = "industrial-design-cmp",
+        version = project.version.toString(),
+    )
+
+    pom {
+        name.set("industrial-design-cmp")
+        description.set(
+            "Industrial-monochrome Compose Multiplatform design system — tokens, components, " +
+                "and a Claude Code skill encoding the craft rules.",
+        )
+        url.set("https://github.com/po4yka/industrial-design-cmp")
+        inceptionYear.set("2026")
+
+        licenses {
+            license {
+                name.set("The Apache Software License, Version 2.0")
+                url.set("https://www.apache.org/licenses/LICENSE-2.0.txt")
+                distribution.set("repo")
+            }
+        }
+
+        developers {
+            developer {
+                id.set("po4yka")
+                name.set("Nikita Pochaev")
+                url.set("https://github.com/po4yka")
+            }
+        }
+
+        scm {
+            url.set("https://github.com/po4yka/industrial-design-cmp")
+            connection.set("scm:git:git://github.com/po4yka/industrial-design-cmp.git")
+            developerConnection.set("scm:git:ssh://git@github.com/po4yka/industrial-design-cmp.git")
+        }
+    }
 }
 
 // --- Token export ------------------------------------------------------------

@@ -6,6 +6,7 @@ Durable records of non-obvious decisions. One file per decision. Once accepted, 
 |---|-------|--------|
 | [0001](0001-component-maturity-labels.md) | Component maturity labels | Accepted |
 | [0002](0002-no-animations-by-default.md) | No spring easing; 200–300ms ease-out only | Accepted |
+| [0003](0003-maven-central-publishing.md) | Publish to Maven Central via the Central Portal | Accepted |
 
 ## Template
 

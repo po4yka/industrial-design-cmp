@@ -12,7 +12,7 @@ The repo ships two artifacts in lockstep:
 
 | Artifact | Path | Purpose |
 |----------|------|---------|
-| **Kotlin library** | `library/` | KMP module published via JitPack. Android + iOS (x64, Arm64, SimulatorArm64). Bundles fonts. |
+| **Kotlin library** | `library/` | KMP module published to Maven Central (`io.github.po4yka:industrial-design-cmp`). Android + iOS (x64, Arm64, SimulatorArm64). Bundles fonts. |
 | **Claude Code skill** | `skill/` | Design philosophy, craft rules, anti-patterns, 15 component patterns with Compose snippets, Material 3 slot mapping. Installs via git subtree. |
 
 Every git tag simultaneously releases a library version (via JitPack) and a skill version. Consumers can upgrade both with a single version bump.
@@ -32,14 +32,15 @@ For the full rule set, open [`skill/SKILL.md`](skill/SKILL.md) or install the Cl
 
 ### Library (consumer Gradle setup)
 
-**Step 1 — add JitPack to `settings.gradle.kts`:**
+**Step 1 — repositories in `settings.gradle.kts`:**
 
 ```kotlin
 dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://jitpack.io")
+        // Optional fallback for unreleased snapshot tags:
+        // maven("https://jitpack.io")
     }
 }
 ```
@@ -51,11 +52,13 @@ dependencyResolutionManagement {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("com.github.po4yka.industrial-design-cmp:library:0.1.0")
+            implementation("io.github.po4yka:industrial-design-cmp:0.1.0")
         }
     }
 }
 ```
+
+> Legacy JitPack coordinate `com.github.po4yka.industrial-design-cmp:library:<tag>` continues to resolve for tags ≤ 0.1.0; new work publishes to Maven Central (see [`docs/publishing.md`](docs/publishing.md)).
 
 **Step 3 — wrap your UI at the root:**
 
@@ -186,7 +189,7 @@ To build the library and verify the publication layout without JitPack:
 ./gradlew :library:publishToMavenLocal # publish to ~/.m2 for local testing
 ```
 
-Consumers can then test against the local Maven coordinate `com.github.po4yka.industrial-design-cmp:library:0.1.0` by adding `mavenLocal()` before `jitpack` in their `settings.gradle.kts`.
+Consumers can then test against the local Maven coordinate `io.github.po4yka:industrial-design-cmp:0.1.0` by adding `mavenLocal()` before the public repositories in their `settings.gradle.kts`.
 
 ## Publishing (maintainers)
 
