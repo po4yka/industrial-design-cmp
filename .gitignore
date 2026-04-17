@@ -10,3 +10,10 @@ xcuserdata
 Pods
 *.xcworkspace
 .omc
+.claude/
+*.log
+kotlin-js-store/
+.fleet/
+/demo/build/
+/library/build/
+xcuserdata

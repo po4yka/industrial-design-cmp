@@ -1,0 +1,34 @@
+# Detekt overrides. Defaults inherited from detekt 1.23.
+# Activate by applying the detekt plugin in library/build.gradle.kts.
+
+build:
+  maxIssues: 0
+
+style:
+  MagicNumber:
+    active: true
+    ignoreNumbers:
+      - '-2'
+      - '-1'
+      - '0'
+      - '1'
+      - '2'
+
+  WildcardImport:
+    active: false
+
+naming:
+  FunctionNaming:
+    active: true
+    # Allow PascalCase for @Composable functions returning Unit
+    functionPattern: '([A-Z][a-zA-Z0-9]*)|([a-z][a-zA-Z0-9]*)'
+
+complexity:
+  LongParameterList:
+    active: true
+    functionThreshold: 10
+    constructorThreshold: 12
+
+comments:
+  UndocumentedPublicFunction:
+    active: false
