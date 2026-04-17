@@ -8,7 +8,7 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.po4yka"
+group = "com.github.po4yka.industrial-design-cmp"
 version = "0.1.0"
 
 kotlin {
