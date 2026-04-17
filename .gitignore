@@ -9,3 +9,4 @@ captures
 xcuserdata
 Pods
 *.xcworkspace
+.omc
