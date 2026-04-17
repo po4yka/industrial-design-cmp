@@ -27,8 +27,10 @@ coordinated release.
 - GitHub repository templates: PR template, bug/feature issue forms, `CODEOWNERS`
 - Architecture Decision Records: `docs/adr/`
 - RFC template for proposing new components: `docs/RFC_TEMPLATE.md`
-- CI workflow: ktlint, detekt, assemble, screenshot tests on every PR
-- Token export pipeline (pending): machine-readable `tokens.json` generated from Kotlin sources
+- CI workflows: `ci.yml` (build/test/lint + iOS sim framework), `publish.yml` (tag-driven), `docs.yml` (Dokka → Pages)
+- `@IndustrialExperimental` opt-in annotation (see ADR 0001) for APIs under iteration
+- Commons unit tests: token stability, motion contracts, segmented-progress smoke paths, button click handling
+- Gradle task `:library:exportTokens` — emits `build/tokens/tokens.json` (Style Dictionary format) for Figma round-tripping
 
 ### Changed
 - Nothing yet — pre-release branch, no stable API exists to change

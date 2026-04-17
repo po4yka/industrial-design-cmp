@@ -171,3 +171,35 @@ After adding the dependency, run your project's verification pipeline. For a KMP
 ```
 
 Stop on the first failure.
+
+---
+
+## 9. TOKEN EXPORT (Figma / Style Dictionary)
+
+The library owns tokens in Kotlin, but designers work in Figma. Export a Style Dictionary-compatible JSON for round-tripping:
+
+```
+./gradlew :library:exportTokens
+```
+
+Output: `library/build/tokens/tokens.json`. Import into Figma via the Tokens Studio plugin (or any Style Dictionary consumer). Keys: `color.{dark,light,accent}.*`, `spacing.*`, `radius.*`, `motion.*`, `typography.*`.
+
+The Kotlin side remains the source of truth. When designers change a token in Figma, open an RFC (see `docs/RFC_TEMPLATE.md`), land the change in `Tokens.kt` / `Colors.kt`, re-run `exportTokens`, and commit the regenerated JSON as part of the PR. No designer edits to the generated file directly.
+
+---
+
+## 10. COMPONENT MATURITY
+
+Every public composable, token, and data class is either **stable** (unannotated) or `@IndustrialExperimental` (opt-in). Stable is covered by semver. Experimental may change in any release — callers must annotate with `@OptIn(IndustrialExperimental::class)`.
+
+```kotlin
+import com.po4yka.industrialdesign.foundation.IndustrialExperimental
+
+@OptIn(IndustrialExperimental::class)
+@Composable
+fun MyScreen() {
+    // Experimental API here
+}
+```
+
+See `docs/adr/0001-component-maturity-labels.md` for the policy.
