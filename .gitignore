@@ -1,0 +1,11 @@
+.gradle
+.idea
+.kotlin
+build
+*.iml
+.DS_Store
+local.properties
+captures
+xcuserdata
+Pods
+*.xcworkspace
