@@ -43,16 +43,19 @@ jobs:
           if-no-files-found: ignore
 
   ios-check:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 60
-    # macos-14's default is Xcode 15.4 (iOS 17.5 SDK), but Compose
-    # Multiplatform 1.11.0's ui-uikit references `_OBJC_CLASS_$_UIViewLayoutRegion`
-    # and auto-links the `UIUtilities` framework, both iOS 18+ only. The
-    # cached skiko klib is likewise built against iOS-simulator 18.5. Pin
-    # DEVELOPER_DIR to Xcode 16.2 (preinstalled on macos-14) so Kotlin/Native's
-    # ld invocation sees the iOS 18 SDK.
+    # Compose Multiplatform 1.11.0's ui-uikit references
+    # `_OBJC_CLASS_$_UIViewLayoutRegion` and auto-links the `UIUtilities`
+    # framework -- both introduced in **iOS 26**, not iOS 18 as a first
+    # guess suggested. macos-14 only ships Xcode up to 16.2 (iOS 18.2 SDK)
+    # so even pinning to its newest Xcode keeps the link failure. Move to
+    # macos-15, which preinstalls Xcode 26.x (default is still 16.4 -- iOS
+    # 18.5 SDK -- so DEVELOPER_DIR has to be set explicitly). Xcode 26.3
+    # brings the iOS 26.2 SDK that defines `UIViewLayoutRegion` and
+    # ships the `UIUtilities` framework.
     env:
-      DEVELOPER_DIR: /Applications/Xcode_16.2.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_26.3.app/Contents/Developer
 
     steps:
       - uses: actions/checkout@v6
