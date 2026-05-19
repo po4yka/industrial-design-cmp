@@ -33,10 +33,8 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v6
 
-      # requires dokka plugin -- will no-op if missing
       - name: Build Dokka HTML
-        run: ./gradlew :library:dokkaHtml --no-daemon
-        continue-on-error: true
+        run: ./gradlew :library:dokkaGenerate --no-daemon
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

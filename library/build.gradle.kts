@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.vanniktech.maven.publish)
+    alias(libs.plugins.dokka)
 }
 
 group = "io.github.po4yka"
