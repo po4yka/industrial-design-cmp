@@ -25,7 +25,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Install compose-preview CLI
-        uses: yschimke/compose-ai-tools/.github/actions/install@v0.10.18
+        uses: yschimke/compose-ai-tools/.github/actions/install@0ad1672f903355923217ed5401a2bcd3af0e0277  # v0.10.18
 
       # Use the upstream CLI for the actual render. The Gradle `renderAllPreviews`
       # task is a stub on the Compose Multiplatform Desktop backend; the CLI
@@ -33,10 +33,21 @@ jobs:
       - name: Render previews
         run: compose-preview render
 
+      - name: Render a11y report
+        run: compose-preview a11y || true
+        # `a11y` is a data extension; failures are advisory.
+      - name: Upload a11y report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-report
+          path: preview-desktop/build/compose-previews/a11y/
+          if-no-files-found: ignore
+
       - name: Publish baselines (main only)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: yschimke/compose-ai-tools/.github/actions/preview-baselines@v0.10.18
+        uses: yschimke/compose-ai-tools/.github/actions/preview-baselines@0ad1672f903355923217ed5401a2bcd3af0e0277  # v0.10.18
 
       - name: Post before/after PR comment
         if: github.event_name == 'pull_request'
-        uses: yschimke/compose-ai-tools/.github/actions/preview-comment@v0.10.18
+        uses: yschimke/compose-ai-tools/.github/actions/preview-comment@0ad1672f903355923217ed5401a2bcd3af0e0277  # v0.10.18

@@ -1,3 +1,4 @@
+import org.gradle.api.publish.maven.tasks.AbstractPublishToMaven
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -37,9 +38,8 @@ kotlin {
         }
     }
 
-    // Desktop target exists solely so the :preview-desktop module (which applies
-    // ee.schimke.composeai.preview) can consume the design system on the JVM.
-    // Intentionally unpublished — Maven Central / JitPack still ship only Android + iOS.
+    // Internal-only target consumed by :preview-desktop; explicitly excluded
+    // from Maven Central uploads further down via task disabling.
     jvm("desktop")
 
     sourceSets {
@@ -116,6 +116,22 @@ mavenPublishing {
             url.set("https://github.com/po4yka/industrial-design-cmp")
             connection.set("scm:git:git://github.com/po4yka/industrial-design-cmp.git")
             developerConnection.set("scm:git:ssh://git@github.com/po4yka/industrial-design-cmp.git")
+        }
+    }
+}
+
+// Exclude the internal-tooling jvm("desktop") target from Maven Central /
+// JitPack uploads. The KMP plugin auto-creates `publishDesktopPublication*`
+// tasks that we disable; `publishToMavenLocal` still includes desktop so
+// `:preview-desktop` can consume it in dev. Verify by inspecting
+// `~/.m2/repository/io/github/po4yka/industrial-design-cmp/` after a local
+// publish — no `*-desktop` artifact should appear under upload paths.
+afterEvaluate {
+    tasks.withType<AbstractPublishToMaven>().configureEach {
+        if (publication.name.equals("desktop", ignoreCase = true) &&
+            !name.endsWith("PublicationToMavenLocal")
+        ) {
+            enabled = false
         }
     }
 }

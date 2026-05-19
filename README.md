@@ -154,14 +154,7 @@ Disabled text has no direct M3 slot — apply `onSurface.copy(alpha = 0.4f)` at 
 
 ## Versions
 
-| Component | Version |
-|-----------|---------|
-| Kotlin | 2.3.20 |
-| Compose Multiplatform | 1.10.3 |
-| AGP | 9.0.1 |
-| JDK target | 17 |
-| Android `minSdk` / `compileSdk` | 27 / 36 |
-| iOS targets | `iosX64`, `iosArm64`, `iosSimulatorArm64` |
+See [`gradle/libs.versions.toml`](gradle/libs.versions.toml) for the canonical version catalog — all Kotlin, Compose Multiplatform, AGP, and target versions are defined there.
 
 The library uses `com.android.kotlin.multiplatform.library` (AGP 9+) as its Android plugin, so consumers on older AGP versions may need to upgrade.
 
@@ -215,6 +208,11 @@ CI installs the CLI and runs `compose-preview render` on every push and PR (`.gi
 
 The `:library` module's `jvm("desktop")` target exists only so `:preview-desktop` can consume it on the JVM — Maven Central / JitPack continue to ship only Android + iOS artifacts.
 
+**Screenshot regression tests (Roborazzi):** The `:screenshot-tests` module provides git-tracked PNG baselines for every `@Preview`, rendered via Robolectric Native Graphics on the Android backend. Goldens live under `screenshot-tests/src/test/snapshots/` and must be committed.
+
+- `./gradlew :screenshot-tests:recordRoborazziDebug` — regenerates committed PNG baselines under `screenshot-tests/src/test/snapshots/`; run this after any intentional visual change and commit the updated PNGs.
+- CI runs `./gradlew :screenshot-tests:verifyRoborazziDebug` on every push and PR and fails on any pixel diff (job: `screenshot-tests` in `.github/workflows/ci.yml`).
+
 ## Publishing (maintainers)
 
 ```bash
@@ -235,6 +233,21 @@ git push -f origin skill-only
 ```
 
 JitPack caches failed builds hard — if the first build at a tag fails, delete the tag and push a new one rather than retrying the same tag.
+
+## iOS framework size
+
+The library bundles three OTF font files (Doto, Space Grotesk, Space Mono) under
+`library/src/commonMain/composeResources/font/`. Each contributes roughly 150-400 KB
+to the static iOS framework — measure with:
+
+```bash
+./gradlew :library:linkReleaseFrameworkIosArm64
+du -sh library/build/bin/iosArm64/releaseFramework/IndustrialDesign.framework
+```
+
+If you ship Latin-only and care about binary size, the fonts can be subsetted with
+`pyftsubset` (fontTools) before re-bundling. A subsetted Latin-only variant of each
+font typically lands under 50 KB.
 
 ## Licensing
 
