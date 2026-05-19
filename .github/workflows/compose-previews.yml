@@ -1,0 +1,42 @@
+name: Compose Previews
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Install compose-preview CLI
+        uses: yschimke/compose-ai-tools/.github/actions/install@v0.10.18
+
+      # Use the upstream CLI for the actual render. The Gradle `renderAllPreviews`
+      # task is a stub on the Compose Multiplatform Desktop backend; the CLI
+      # spawns the Skiko daemon that produces real PNGs.
+      - name: Render previews
+        run: compose-preview render
+
+      - name: Publish baselines (main only)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: yschimke/compose-ai-tools/.github/actions/preview-baselines@v0.10.18
+
+      - name: Post before/after PR comment
+        if: github.event_name == 'pull_request'
+        uses: yschimke/compose-ai-tools/.github/actions/preview-comment@v0.10.18

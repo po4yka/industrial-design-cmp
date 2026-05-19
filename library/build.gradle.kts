@@ -37,6 +37,11 @@ kotlin {
         }
     }
 
+    // Desktop target exists solely so the :preview-desktop module (which applies
+    // ee.schimke.composeai.preview) can consume the design system on the JVM.
+    // Intentionally unpublished — Maven Central / JitPack still ship only Android + iOS.
+    jvm("desktop")
+
     sourceSets {
         commonMain.dependencies {
             implementation(compose.ui)

@@ -28,3 +28,4 @@ dependencyResolutionManagement {
 rootProject.name = "industrial-design-cmp"
 include(":library")
 include(":demo")
+include(":preview-desktop")

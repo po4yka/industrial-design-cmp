@@ -191,6 +191,30 @@ To build the library and verify the publication layout without JitPack:
 
 Consumers can then test against the local Maven coordinate `io.github.po4yka:industrial-design-cmp:0.1.0` by adding `mavenLocal()` before the public repositories in their `settings.gradle.kts`.
 
+## Rendering previews
+
+The `:preview-desktop` module hosts `@Preview` composables (one per component, using `androidx.compose.ui.tooling.preview.Preview` — what compose-ai-tools scans for) and applies the [compose-ai-tools](https://github.com/yschimke/compose-ai-tools) Gradle plugin (`ee.schimke.composeai.preview`). The Gradle plugin discovers previews and wires the classpath; the actual PNG rendering for the Compose Multiplatform Desktop backend is done by the upstream `compose-preview` CLI, which spawns a Skiko-based daemon.
+
+**Install the CLI** (one-time, puts `compose-preview` on `$PATH`):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/yschimke/skills/main/scripts/install.sh | bash
+```
+
+**Then render** from the repo root:
+
+```bash
+./gradlew :preview-desktop:discoverPreviews   # list every @Preview found (Gradle)
+compose-preview render                        # render every @Preview to PNG (CLI / daemon)
+ls preview-desktop/build/compose-previews/renders/   # ≥71 PNGs, one per preview
+```
+
+> The Gradle `renderAllPreviews` task on the Compose Multiplatform Desktop backend is intentionally a stub — it emits placeholder PNGs — because real rendering lives in the daemon. The Android backend (Robolectric) renders via Gradle directly, but this project's `:preview-desktop` module uses the Desktop backend to stay JDK-17-friendly. Use the CLI for real renders.
+
+CI installs the CLI and runs `compose-preview render` on every push and PR (`.github/workflows/compose-previews.yml`), then posts before/after image comments on PRs via the upstream composite actions.
+
+The `:library` module's `jvm("desktop")` target exists only so `:preview-desktop` can consume it on the JVM — Maven Central / JitPack continue to ship only Android + iOS artifacts.
+
 ## Publishing (maintainers)
 
 ```bash
