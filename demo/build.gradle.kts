@@ -38,13 +38,13 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(project(":library"))
-            implementation(compose.ui)
-            implementation(compose.foundation)
-            implementation(compose.material3)
-            implementation(compose.components.resources)
+            implementation(libs.compose.mp.ui)
+            implementation(libs.compose.mp.foundation)
+            implementation(libs.compose.mp.material3)
+            implementation(libs.compose.mp.components.resources)
         }
         androidMain.dependencies {
-            implementation(compose.uiTooling)
+            implementation(libs.compose.mp.ui.tooling)
         }
     }
 }

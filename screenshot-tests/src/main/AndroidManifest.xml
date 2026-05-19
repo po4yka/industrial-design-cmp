@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Robolectric (since PR #4736) strictly requires the activity launched by
+  ActivityScenario to be declared in the merged manifest. createAndroidComposeRule
+  <ComponentActivity>() emits a MAIN/LAUNCHER intent against
+  <screenshot-tests namespace>.test/androidx.activity.ComponentActivity, so this
+  manifest registers a bare ComponentActivity entry with the matching filter.
+
+  :screenshot-tests is internal-only (no publication), so manifest contents here
+  do not leak into any published artifact.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name="androidx.activity.ComponentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

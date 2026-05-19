@@ -39,6 +39,10 @@ class PreviewScreenshotTest(
         composeRule = composeTestRule,
         captureRoot = composeTestRule.onRoot(),
         options = RoborazziRule.Options(
+            // Default is CaptureType.None, which leaves the rule passive and
+            // makes verify a 0/0 no-op. LastImage captures the rendered root
+            // once setContent settles, which is what each @Test below produces.
+            captureType = RoborazziRule.CaptureType.LastImage(),
             outputDirectoryPath = "src/test/snapshots",
             outputFileProvider = { description, dir, fileExtension ->
                 java.io.File(

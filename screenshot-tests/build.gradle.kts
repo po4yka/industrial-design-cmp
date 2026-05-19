@@ -43,9 +43,10 @@ android {
     // Share the preview source set from :preview-desktop so we don't duplicate files.
     // The previews import IndustrialTheme from :library (available via testImplementation)
     // and androidx.compose.ui.tooling.preview.Preview (available from compose-bom).
+    // `srcDir(Any)` was deprecated in AGP 9 — mutate `directories` directly.
     sourceSets {
         getByName("test") {
-            kotlin.srcDir("../preview-desktop/src/main/kotlin")
+            kotlin.directories.add("../preview-desktop/src/main/kotlin")
         }
     }
 
