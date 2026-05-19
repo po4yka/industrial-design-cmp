@@ -45,6 +45,14 @@ jobs:
   ios-check:
     runs-on: macos-14
     timeout-minutes: 60
+    # macos-14's default is Xcode 15.4 (iOS 17.5 SDK), but Compose
+    # Multiplatform 1.11.0's ui-uikit references `_OBJC_CLASS_$_UIViewLayoutRegion`
+    # and auto-links the `UIUtilities` framework, both iOS 18+ only. The
+    # cached skiko klib is likewise built against iOS-simulator 18.5. Pin
+    # DEVELOPER_DIR to Xcode 16.2 (preinstalled on macos-14) so Kotlin/Native's
+    # ld invocation sees the iOS 18 SDK.
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.2.app/Contents/Developer
 
     steps:
       - uses: actions/checkout@v6

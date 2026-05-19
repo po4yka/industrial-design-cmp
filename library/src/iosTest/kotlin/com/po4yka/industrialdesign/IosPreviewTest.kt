@@ -5,7 +5,7 @@ import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.runComposeUiTest
+import androidx.compose.ui.test.v2.runComposeUiTest
 import com.po4yka.industrialdesign.components.IndustrialBottomBar
 import com.po4yka.industrialdesign.components.IndustrialDial
 import com.po4yka.industrialdesign.components.IndustrialPrimaryButton
