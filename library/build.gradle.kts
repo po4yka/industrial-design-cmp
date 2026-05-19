@@ -1,4 +1,3 @@
-import org.gradle.api.publish.maven.tasks.AbstractPublishToMaven
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -134,17 +133,15 @@ mavenPublishing {
 // Exclude the internal-tooling jvm("desktop") target from Maven Central /
 // JitPack uploads. The KMP plugin auto-creates `publishDesktopPublication*`
 // tasks that we disable; `publishToMavenLocal` still includes desktop so
-// `:preview-desktop` can consume it in dev. Verify by inspecting
-// `~/.m2/repository/io/github/po4yka/industrial-design-cmp/` after a local
-// publish — no `*-desktop` artifact should appear under upload paths.
-afterEvaluate {
-    tasks.withType<AbstractPublishToMaven>().configureEach {
-        if (publication.name.equals("desktop", ignoreCase = true) &&
-            !name.endsWith("PublicationToMavenLocal")
-        ) {
-            enabled = false
-        }
-    }
+// `:preview-desktop` can consume it in dev. Filter by task name rather than
+// `task.publication.name`: the publication property is lazily wired and reads
+// null for some KMP targets during `configureEach`, NPE-ing model queries
+// (e.g. Gradle's GradleProject probe used by tooling).
+tasks.matching { task ->
+    task.name.startsWith("publishDesktopPublicationTo") &&
+        task.name != "publishDesktopPublicationToMavenLocal"
+}.configureEach {
+    enabled = false
 }
 
 // --- Token export ------------------------------------------------------------
