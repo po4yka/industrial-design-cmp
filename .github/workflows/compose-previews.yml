@@ -27,6 +27,32 @@ jobs:
       - name: Install compose-preview CLI
         uses: yschimke/compose-ai-tools/.github/actions/install@0ad1672f903355923217ed5401a2bcd3af0e0277  # v0.10.18
 
+      # Force every `compose-preview` invocation in this job to pass
+      # --no-auto-inject. Without it the CLI applies
+      # `ee.schimke.composeai.preview` to every project via an init script and
+      # registers `renderPreviews` on :demo. That task reads
+      # :demo:androidRuntimeClasspath, which AGP 9 publishes alongside
+      # :library:androidRuntimeElements' many secondary variants
+      # (android-aar-metadata, android-art-profile, android-classes-jar, jar,
+      # …). The plugin's consumer requests no `artifactType`, so Gradle fails
+      # with "Cannot choose between variants" ambiguity. :preview-desktop
+      # already applies the plugin explicitly (the only module where the
+      # consolidated @Preview surface lives), so auto-inject is unnecessary
+      # noise here. The shim also covers the upstream `preview-baselines` /
+      # `preview-comment` composite actions further down — they invoke
+      # `compose-preview show` directly with no way to forward extra args.
+      - name: Shim compose-preview to always pass --no-auto-inject
+        shell: bash
+        run: |
+          real="$(command -v compose-preview)"
+          mkdir -p "$HOME/.bin"
+          cat > "$HOME/.bin/compose-preview" <<EOF
+          #!/usr/bin/env bash
+          exec "$real" "\$@" --no-auto-inject
+          EOF
+          chmod +x "$HOME/.bin/compose-preview"
+          echo "$HOME/.bin" >> "$GITHUB_PATH"
+
       # Use the upstream CLI for the actual render. The Gradle `renderAllPreviews`
       # task is a stub on the Compose Multiplatform Desktop backend; the CLI
       # spawns the Skiko daemon that produces real PNGs.
