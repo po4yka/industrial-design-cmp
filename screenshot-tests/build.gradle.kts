@@ -79,5 +79,5 @@ dependencies {
     testImplementation(libs.roborazzi.compose)
     testImplementation(libs.roborazzi.junit.rule)
     testImplementation(libs.roborazzi.compose.preview.scanner.support)
-    testImplementation(libs.preview.scanner.jvm)
+    testImplementation(libs.preview.scanner.android)
 }
