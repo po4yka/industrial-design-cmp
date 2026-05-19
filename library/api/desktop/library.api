@@ -1,0 +1,420 @@
+public final class com/po4yka/industrialdesign/ColorsKt {
+	public static final fun getIndustrialDarkColorScheme ()Landroidx/compose/material3/ColorScheme;
+	public static final fun getIndustrialLightColorScheme ()Landroidx/compose/material3/ColorScheme;
+}
+
+public final class com/po4yka/industrialdesign/IndustrialTokens {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/IndustrialTokens;
+}
+
+public final class com/po4yka/industrialdesign/IndustrialTokens$Accent {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/IndustrialTokens$Accent;
+	public final fun getInteractive-0d7_KjU ()J
+	public final fun getInteractiveLight-0d7_KjU ()J
+	public final fun getSignal-0d7_KjU ()J
+	public final fun getSignalSubtle-0d7_KjU ()J
+	public final fun getSuccess-0d7_KjU ()J
+	public final fun getWarning-0d7_KjU ()J
+}
+
+public final class com/po4yka/industrialdesign/IndustrialTokens$Motion {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/IndustrialTokens$Motion;
+	public static final field MicroDurationMillis I
+	public static final field TransitionDurationMillis I
+	public final fun getEasing ()Landroidx/compose/animation/core/Easing;
+}
+
+public final class com/po4yka/industrialdesign/IndustrialTokens$Radius {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/IndustrialTokens$Radius;
+	public final fun getCard-D9Ej5fM ()F
+	public final fun getCompact-D9Ej5fM ()F
+	public final fun getPill-D9Ej5fM ()F
+	public final fun getTechnical-D9Ej5fM ()F
+}
+
+public final class com/po4yka/industrialdesign/IndustrialTokens$Spacing {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/IndustrialTokens$Spacing;
+	public final fun getLg-D9Ej5fM ()F
+	public final fun getMd-D9Ej5fM ()F
+	public final fun getSm-D9Ej5fM ()F
+	public final fun getXl-D9Ej5fM ()F
+	public final fun getXl2-D9Ej5fM ()F
+	public final fun getXl3-D9Ej5fM ()F
+	public final fun getXl4-D9Ej5fM ()F
+	public final fun getXs-D9Ej5fM ()F
+	public final fun getXs2-D9Ej5fM ()F
+}
+
+public final class com/po4yka/industrialdesign/ThemeKt {
+	public static final fun IndustrialTheme (ZLkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/TypographyKt {
+	public static final fun IndustrialTypography (Landroidx/compose/runtime/Composer;I)Landroidx/compose/material3/Typography;
+}
+
+public final class com/po4yka/industrialdesign/components/BarChartKt {
+	public static final fun IndustrialBarChart-ipklJco (Ljava/util/List;Landroidx/compose/ui/Modifier;FJJZFLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/BarDatum {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;F)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()F
+	public final fun copy (Ljava/lang/String;F)Lcom/po4yka/industrialdesign/components/BarDatum;
+	public static synthetic fun copy$default (Lcom/po4yka/industrialdesign/components/BarDatum;Ljava/lang/String;FILjava/lang/Object;)Lcom/po4yka/industrialdesign/components/BarDatum;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getValue ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/po4yka/industrialdesign/components/ButtonsKt {
+	public static final fun IndustrialDestructiveButton (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialDestructiveButton (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialGhostButton (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialGhostButton (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialPrimaryButton (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialPrimaryButton (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialSecondaryButton (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialSecondaryButton (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Landroidx/compose/ui/Modifier;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/CardKt {
+	public static final fun IndustrialCard (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function0;ZZLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/ComposableSingletons$ButtonsKt {
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/components/ComposableSingletons$ButtonsKt;
+	public fun <init> ()V
+	public final fun getLambda$-1179151551$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1517910050$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1646698813$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-489662015$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-853278157$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-950822319$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$185361230$library ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$847776721$library ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class com/po4yka/industrialdesign/components/ComposableSingletons$OverlaysKt {
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/components/ComposableSingletons$OverlaysKt;
+	public fun <init> ()V
+	public final fun getLambda$1215185646$library ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class com/po4yka/industrialdesign/components/ControlShape : java/lang/Enum {
+	public static final field Compact Lcom/po4yka/industrialdesign/components/ControlShape;
+	public static final field Pill Lcom/po4yka/industrialdesign/components/ControlShape;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/components/ControlShape;
+	public static fun values ()[Lcom/po4yka/industrialdesign/components/ControlShape;
+}
+
+public final class com/po4yka/industrialdesign/components/DotGridKt {
+	public static final fun IndustrialDotGrid-pWqTlbw (IILkotlin/jvm/functions/Function2;Landroidx/compose/ui/Modifier;FFJLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/GaugeKt {
+	public static final fun IndustrialDial-eYQShMw (FLandroidx/compose/ui/Modifier;FFLjava/lang/String;FIJJLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialRadialGauge-XBZIF-8 (FLandroidx/compose/ui/Modifier;Lkotlin/ranges/ClosedFloatingPointRange;IFJJLjava/lang/String;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/InputKt {
+	public static final fun IndustrialMonoTextField (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ZLandroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/ui/text/input/VisualTransformation;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
+	public static final fun IndustrialTextField (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;ZLandroidx/compose/foundation/text/KeyboardOptions;Landroidx/compose/ui/text/input/VisualTransformation;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;III)V
+}
+
+public final class com/po4yka/industrialdesign/components/NavItem {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Lkotlin/jvm/functions/Function2;)V
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlin/jvm/functions/Function2;
+	public final fun copy (Ljava/lang/String;Lkotlin/jvm/functions/Function2;)Lcom/po4yka/industrialdesign/components/NavItem;
+	public static synthetic fun copy$default (Lcom/po4yka/industrialdesign/components/NavItem;Ljava/lang/String;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/po4yka/industrialdesign/components/NavItem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIcon ()Lkotlin/jvm/functions/Function2;
+	public final fun getLabel ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/po4yka/industrialdesign/components/NavigationKt {
+	public static final fun IndustrialBackButton (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialBottomBar (Ljava/util/List;ILkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialPeriodNav (Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;ZZLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialTopNav (Ljava/util/List;ILkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lcom/po4yka/industrialdesign/components/Separator;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/OverlaysKt {
+	public static final fun IndustrialBottomSheet (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialDialog-hGBTI10 (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Ljava/lang/String;FLkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialDropdownMenu (ZLkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialInlineStatus (Ljava/lang/String;Landroidx/compose/ui/Modifier;Lcom/po4yka/industrialdesign/components/StatusKind;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/SegmentedControlKt {
+	public static final fun IndustrialSegmentedControl (Ljava/util/List;ILkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;Lcom/po4yka/industrialdesign/components/ControlShape;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/SegmentedProgressKt {
+	public static final fun IndustrialLinearProgress-EfRbmQ0 (FLandroidx/compose/ui/Modifier;FJLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialProgressReadout (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialSegmentedProgressBar-kPsmdy8 (FLandroidx/compose/ui/Modifier;IFJJFLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/Separator : java/lang/Enum {
+	public static final field Bracket Lcom/po4yka/industrialdesign/components/Separator;
+	public static final field None Lcom/po4yka/industrialdesign/components/Separator;
+	public static final field Pipe Lcom/po4yka/industrialdesign/components/Separator;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/components/Separator;
+	public static fun values ()[Lcom/po4yka/industrialdesign/components/Separator;
+}
+
+public final class com/po4yka/industrialdesign/components/StatRowKt {
+	public static final fun IndustrialHierarchicalRow-3f6hBDE (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/Modifier;IJLjava/lang/String;Lcom/po4yka/industrialdesign/components/Trend;Landroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialStatRow-fWhpE4E (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/Modifier;JLjava/lang/String;Lcom/po4yka/industrialdesign/components/Trend;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/StatusKind : java/lang/Enum {
+	public static final field Error Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static final field Info Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static final field Loading Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static final field Success Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static final field Warning Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/components/StatusKind;
+	public static fun values ()[Lcom/po4yka/industrialdesign/components/StatusKind;
+}
+
+public final class com/po4yka/industrialdesign/components/TableColumn {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Landroidx/compose/ui/Alignment$Horizontal;FZ)V
+	public synthetic fun <init> (Ljava/lang/String;Landroidx/compose/ui/Alignment$Horizontal;FZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Landroidx/compose/ui/Alignment$Horizontal;
+	public final fun component3 ()F
+	public final fun component4 ()Z
+	public final fun copy (Ljava/lang/String;Landroidx/compose/ui/Alignment$Horizontal;FZ)Lcom/po4yka/industrialdesign/components/TableColumn;
+	public static synthetic fun copy$default (Lcom/po4yka/industrialdesign/components/TableColumn;Ljava/lang/String;Landroidx/compose/ui/Alignment$Horizontal;FZILjava/lang/Object;)Lcom/po4yka/industrialdesign/components/TableColumn;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlignment ()Landroidx/compose/ui/Alignment$Horizontal;
+	public final fun getHeader ()Ljava/lang/String;
+	public final fun getMono ()Z
+	public final fun getWeight ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/po4yka/industrialdesign/components/TableKt {
+	public static final fun IndustrialTable (Ljava/util/List;Ljava/util/List;Landroidx/compose/ui/Modifier;Ljava/lang/Integer;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/TagKt {
+	public static final fun IndustrialTag (Ljava/lang/String;Landroidx/compose/ui/Modifier;ZLcom/po4yka/industrialdesign/components/TagShape;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/TagShape : java/lang/Enum {
+	public static final field Pill Lcom/po4yka/industrialdesign/components/TagShape;
+	public static final field Technical Lcom/po4yka/industrialdesign/components/TagShape;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/components/TagShape;
+	public static fun values ()[Lcom/po4yka/industrialdesign/components/TagShape;
+}
+
+public final class com/po4yka/industrialdesign/components/ToggleKt {
+	public static final fun IndustrialCheckbox (ZLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialSwitch (ZLkotlin/jvm/functions/Function1;Landroidx/compose/ui/Modifier;ZLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/components/Trend : java/lang/Enum {
+	public static final field Down Lcom/po4yka/industrialdesign/components/Trend;
+	public static final field Flat Lcom/po4yka/industrialdesign/components/Trend;
+	public static final field Up Lcom/po4yka/industrialdesign/components/Trend;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/components/Trend;
+	public static fun values ()[Lcom/po4yka/industrialdesign/components/Trend;
+}
+
+public final class com/po4yka/industrialdesign/components/WidgetKt {
+	public static final fun IndustrialWidget (Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/Modifier;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/foundation/A11yKt {
+	public static final fun calibrateForFontScale (Landroidx/compose/runtime/Composer;I)F
+	public static final fun industrialSemantics-Vn3bF5k (Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/ui/semantics/Role;Ljava/lang/String;)Landroidx/compose/ui/Modifier;
+	public static synthetic fun industrialSemantics-Vn3bF5k$default (Landroidx/compose/ui/Modifier;Ljava/lang/String;Landroidx/compose/ui/semantics/Role;Ljava/lang/String;ILjava/lang/Object;)Landroidx/compose/ui/Modifier;
+	public static final fun minTouchTarget (Landroidx/compose/ui/Modifier;)Landroidx/compose/ui/Modifier;
+}
+
+public final class com/po4yka/industrialdesign/foundation/AdaptiveKt {
+	public static final fun getLocalIndustrialDensity ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun rememberIndustrialWindowSize (Landroidx/compose/runtime/Composer;I)Lcom/po4yka/industrialdesign/foundation/IndustrialWindowSize;
+}
+
+public final class com/po4yka/industrialdesign/foundation/ArrowDirection : java/lang/Enum {
+	public static final field Down Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+	public static final field Left Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+	public static final field Right Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+	public static final field Up Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+	public static fun values ()[Lcom/po4yka/industrialdesign/foundation/ArrowDirection;
+}
+
+public final class com/po4yka/industrialdesign/foundation/ExtendedThemeKt {
+	public static final fun ProvideIndustrialExtended (Lcom/po4yka/industrialdesign/foundation/IndustrialExtendedTokens;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;I)V
+	public static final fun getLocalIndustrialExtendedTokens ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+}
+
+public final class com/po4yka/industrialdesign/foundation/IconsKt {
+	public static final fun IndustrialArrowIcon-EfRbmQ0 (Lcom/po4yka/industrialdesign/foundation/ArrowDirection;Landroidx/compose/ui/Modifier;FJLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialCheckIcon-9IZ8Weo (Landroidx/compose/ui/Modifier;FJLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialCloseIcon-9IZ8Weo (Landroidx/compose/ui/Modifier;FJLandroidx/compose/runtime/Composer;II)V
+	public static final fun IndustrialDotIcon-9IZ8Weo (Landroidx/compose/ui/Modifier;FJLandroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialA11y {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/foundation/IndustrialA11y;
+	public final fun getMinTouchTargetSize-D9Ej5fM ()F
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialDensity {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/foundation/IndustrialDensity;
+	public final fun getComfortable ()F
+	public final fun getCompact ()F
+	public final fun getDefault ()F
+}
+
+public abstract interface annotation class com/po4yka/industrialdesign/foundation/IndustrialExperimental : java/lang/annotation/Annotation {
+}
+
+public abstract interface class com/po4yka/industrialdesign/foundation/IndustrialExtendedTokens {
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialHeightClass : java/lang/Enum {
+	public static final field Compact Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public static final field Expanded Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public static final field Medium Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public static fun values ()[Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialIconSpec {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/foundation/IndustrialIconSpec;
+	public final fun getSizeLg-D9Ej5fM ()F
+	public final fun getSizeMd-D9Ej5fM ()F
+	public final fun getSizeSm-D9Ej5fM ()F
+	public final fun getSizeXl-D9Ej5fM ()F
+	public final fun getStrokeWidthBold-D9Ej5fM ()F
+	public final fun getStrokeWidthDefault-D9Ej5fM ()F
+	public final fun getStrokeWidthThin-D9Ej5fM ()F
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialMotion {
+	public static final field $stable I
+	public static final field DurationFast I
+	public static final field DurationMicro I
+	public static final field DurationSlow I
+	public static final field DurationStandard I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/foundation/IndustrialMotion;
+	public final fun getDecelerate ()Landroidx/compose/animation/core/Easing;
+	public final fun getEaseOut ()Landroidx/compose/animation/core/Easing;
+	public final fun getLinear ()Landroidx/compose/animation/core/Easing;
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialWidthClass : java/lang/Enum {
+	public static final field Compact Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public static final field Expanded Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public static final field Medium Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public static fun values ()[Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+}
+
+public final class com/po4yka/industrialdesign/foundation/IndustrialWindowSize {
+	public static final field $stable I
+	public synthetic fun <init> (FFLcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-D9Ej5fM ()F
+	public final fun component2-D9Ej5fM ()F
+	public final fun component3 ()Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public final fun component4 ()Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public final fun copy-i1RSzL4 (FFLcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;)Lcom/po4yka/industrialdesign/foundation/IndustrialWindowSize;
+	public static synthetic fun copy-i1RSzL4$default (Lcom/po4yka/industrialdesign/foundation/IndustrialWindowSize;FFLcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;ILjava/lang/Object;)Lcom/po4yka/industrialdesign/foundation/IndustrialWindowSize;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeight-D9Ej5fM ()F
+	public final fun getHeightClass ()Lcom/po4yka/industrialdesign/foundation/IndustrialHeightClass;
+	public final fun getWidth-D9Ej5fM ()F
+	public final fun getWidthClass ()Lcom/po4yka/industrialdesign/foundation/IndustrialWidthClass;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/po4yka/industrialdesign/foundation/MotionKt {
+	public static final fun getLocalReducedMotion ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+	public static final fun industrialTween (ILandroidx/compose/animation/core/Easing;)Landroidx/compose/animation/core/TweenSpec;
+	public static synthetic fun industrialTween$default (ILandroidx/compose/animation/core/Easing;ILjava/lang/Object;)Landroidx/compose/animation/core/TweenSpec;
+	public static final fun rememberReducedMotion (Landroidx/compose/runtime/Composer;I)Z
+}
+
+public final class com/po4yka/industrialdesign/resources/ActualResourceCollectorsKt {
+	public static final fun getAllDrawableResources (Lcom/po4yka/industrialdesign/resources/Res;)Ljava/util/Map;
+	public static final fun getAllFontResources (Lcom/po4yka/industrialdesign/resources/Res;)Ljava/util/Map;
+	public static final fun getAllPluralStringResources (Lcom/po4yka/industrialdesign/resources/Res;)Ljava/util/Map;
+	public static final fun getAllStringArrayResources (Lcom/po4yka/industrialdesign/resources/Res;)Ljava/util/Map;
+	public static final fun getAllStringResources (Lcom/po4yka/industrialdesign/resources/Res;)Ljava/util/Map;
+}
+
+public final class com/po4yka/industrialdesign/resources/Font0_commonMainKt {
+	public static final fun getDoto (Lcom/po4yka/industrialdesign/resources/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+	public static final fun getOFL (Lcom/po4yka/industrialdesign/resources/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+	public static final fun getSpace_grotesk (Lcom/po4yka/industrialdesign/resources/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+	public static final fun getSpace_mono_bold (Lcom/po4yka/industrialdesign/resources/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+	public static final fun getSpace_mono_regular (Lcom/po4yka/industrialdesign/resources/Res$font;)Lorg/jetbrains/compose/resources/FontResource;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res;
+	public final fun getUri (Ljava/lang/String;)Ljava/lang/String;
+	public final fun readBytes (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res$array {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res$array;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res$drawable {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res$drawable;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res$font {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res$font;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res$plurals {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res$plurals;
+}
+
+public final class com/po4yka/industrialdesign/resources/Res$string {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/po4yka/industrialdesign/resources/Res$string;
+}
+

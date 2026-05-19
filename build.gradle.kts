@@ -6,4 +6,5 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.composeai.preview) apply false
     alias(libs.plugins.roborazzi) apply false
+    alias(libs.plugins.binary.compatibility.validator) apply false
 }

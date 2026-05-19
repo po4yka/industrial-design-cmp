@@ -10,7 +10,8 @@ xcuserdata
 Pods
 *.xcworkspace
 .omc
-.claude/
+.claude/*
+!.claude/skills/
 *.log
 kotlin-js-store/
 .fleet/

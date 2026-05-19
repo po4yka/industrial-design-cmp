@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.vanniktech.maven.publish)
     alias(libs.plugins.dokka)
+    alias(libs.plugins.binary.compatibility.validator)
 }
 
 group = "io.github.po4yka"
@@ -60,6 +61,16 @@ kotlin {
 compose.resources {
     publicResClass = true
     packageOfResClass = "com.po4yka.industrialdesign.resources"
+}
+
+// Slack's compose-lints is bundled into the published AAR via the `lintChecks`
+// configuration (verified by `bundleAndroidMainLocalLintAar`). Consumers running
+// `:lint` on their app modules pick up the Compose stability/correctness rules.
+// AGP 9.0.1's `com.android.kotlin.multiplatform.library` plugin does not yet
+// register a top-level `lint` task on KMP-Android modules, so local analysis
+// of this module's own sources requires running lint from a consuming app.
+dependencies {
+    lintChecks(libs.compose.lints)
 }
 
 // --- Publishing --------------------------------------------------------------
@@ -218,5 +229,18 @@ tasks.register("exportTokens") {
         file.parentFile.mkdirs()
         file.writeText(json)
         logger.lifecycle("Exported tokens → ${file.absolutePath}")
+    }
+}
+
+// --- Binary compatibility validation -----------------------------------------
+// Tracks the public API surface of `industrial-design-cmp` across JVM/Android/
+// native targets so accidental ABI breaks land in PR review rather than at
+// consumer build time. Refresh baselines after intentional API changes with
+// `./gradlew :library:apiDump`; CI runs `:library:apiCheck`.
+apiValidation {
+    nonPublicMarkers.add("kotlin.PublishedApi")
+    @OptIn(kotlinx.validation.ExperimentalBCVApi::class)
+    klib {
+        enabled = true
     }
 }

@@ -1,0 +1,427 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.po4yka:library>
+open annotation class com.po4yka.industrialdesign.foundation/IndustrialExperimental : kotlin/Annotation { // com.po4yka.industrialdesign.foundation/IndustrialExperimental|null[0]
+    constructor <init>() // com.po4yka.industrialdesign.foundation/IndustrialExperimental.<init>|<init>(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.components/ControlShape : kotlin/Enum<com.po4yka.industrialdesign.components/ControlShape> { // com.po4yka.industrialdesign.components/ControlShape|null[0]
+    enum entry Compact // com.po4yka.industrialdesign.components/ControlShape.Compact|null[0]
+    enum entry Pill // com.po4yka.industrialdesign.components/ControlShape.Pill|null[0]
+
+    final val entries // com.po4yka.industrialdesign.components/ControlShape.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.components/ControlShape> // com.po4yka.industrialdesign.components/ControlShape.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.components/ControlShape // com.po4yka.industrialdesign.components/ControlShape.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.components/ControlShape> // com.po4yka.industrialdesign.components/ControlShape.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.components/Separator : kotlin/Enum<com.po4yka.industrialdesign.components/Separator> { // com.po4yka.industrialdesign.components/Separator|null[0]
+    enum entry Bracket // com.po4yka.industrialdesign.components/Separator.Bracket|null[0]
+    enum entry None // com.po4yka.industrialdesign.components/Separator.None|null[0]
+    enum entry Pipe // com.po4yka.industrialdesign.components/Separator.Pipe|null[0]
+
+    final val entries // com.po4yka.industrialdesign.components/Separator.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.components/Separator> // com.po4yka.industrialdesign.components/Separator.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.components/Separator // com.po4yka.industrialdesign.components/Separator.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.components/Separator> // com.po4yka.industrialdesign.components/Separator.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.components/StatusKind : kotlin/Enum<com.po4yka.industrialdesign.components/StatusKind> { // com.po4yka.industrialdesign.components/StatusKind|null[0]
+    enum entry Error // com.po4yka.industrialdesign.components/StatusKind.Error|null[0]
+    enum entry Info // com.po4yka.industrialdesign.components/StatusKind.Info|null[0]
+    enum entry Loading // com.po4yka.industrialdesign.components/StatusKind.Loading|null[0]
+    enum entry Success // com.po4yka.industrialdesign.components/StatusKind.Success|null[0]
+    enum entry Warning // com.po4yka.industrialdesign.components/StatusKind.Warning|null[0]
+
+    final val entries // com.po4yka.industrialdesign.components/StatusKind.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.components/StatusKind> // com.po4yka.industrialdesign.components/StatusKind.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.components/StatusKind // com.po4yka.industrialdesign.components/StatusKind.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.components/StatusKind> // com.po4yka.industrialdesign.components/StatusKind.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.components/TagShape : kotlin/Enum<com.po4yka.industrialdesign.components/TagShape> { // com.po4yka.industrialdesign.components/TagShape|null[0]
+    enum entry Pill // com.po4yka.industrialdesign.components/TagShape.Pill|null[0]
+    enum entry Technical // com.po4yka.industrialdesign.components/TagShape.Technical|null[0]
+
+    final val entries // com.po4yka.industrialdesign.components/TagShape.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.components/TagShape> // com.po4yka.industrialdesign.components/TagShape.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.components/TagShape // com.po4yka.industrialdesign.components/TagShape.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.components/TagShape> // com.po4yka.industrialdesign.components/TagShape.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.components/Trend : kotlin/Enum<com.po4yka.industrialdesign.components/Trend> { // com.po4yka.industrialdesign.components/Trend|null[0]
+    enum entry Down // com.po4yka.industrialdesign.components/Trend.Down|null[0]
+    enum entry Flat // com.po4yka.industrialdesign.components/Trend.Flat|null[0]
+    enum entry Up // com.po4yka.industrialdesign.components/Trend.Up|null[0]
+
+    final val entries // com.po4yka.industrialdesign.components/Trend.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.components/Trend> // com.po4yka.industrialdesign.components/Trend.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.components/Trend // com.po4yka.industrialdesign.components/Trend.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.components/Trend> // com.po4yka.industrialdesign.components/Trend.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.foundation/ArrowDirection : kotlin/Enum<com.po4yka.industrialdesign.foundation/ArrowDirection> { // com.po4yka.industrialdesign.foundation/ArrowDirection|null[0]
+    enum entry Down // com.po4yka.industrialdesign.foundation/ArrowDirection.Down|null[0]
+    enum entry Left // com.po4yka.industrialdesign.foundation/ArrowDirection.Left|null[0]
+    enum entry Right // com.po4yka.industrialdesign.foundation/ArrowDirection.Right|null[0]
+    enum entry Up // com.po4yka.industrialdesign.foundation/ArrowDirection.Up|null[0]
+
+    final val entries // com.po4yka.industrialdesign.foundation/ArrowDirection.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.foundation/ArrowDirection> // com.po4yka.industrialdesign.foundation/ArrowDirection.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.foundation/ArrowDirection // com.po4yka.industrialdesign.foundation/ArrowDirection.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.foundation/ArrowDirection> // com.po4yka.industrialdesign.foundation/ArrowDirection.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.foundation/IndustrialHeightClass : kotlin/Enum<com.po4yka.industrialdesign.foundation/IndustrialHeightClass> { // com.po4yka.industrialdesign.foundation/IndustrialHeightClass|null[0]
+    enum entry Compact // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.Compact|null[0]
+    enum entry Expanded // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.Expanded|null[0]
+    enum entry Medium // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.Medium|null[0]
+
+    final val entries // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.foundation/IndustrialHeightClass> // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.foundation/IndustrialHeightClass // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.foundation/IndustrialHeightClass> // com.po4yka.industrialdesign.foundation/IndustrialHeightClass.values|values#static(){}[0]
+}
+
+final enum class com.po4yka.industrialdesign.foundation/IndustrialWidthClass : kotlin/Enum<com.po4yka.industrialdesign.foundation/IndustrialWidthClass> { // com.po4yka.industrialdesign.foundation/IndustrialWidthClass|null[0]
+    enum entry Compact // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.Compact|null[0]
+    enum entry Expanded // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.Expanded|null[0]
+    enum entry Medium // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.Medium|null[0]
+
+    final val entries // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.po4yka.industrialdesign.foundation/IndustrialWidthClass> // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.po4yka.industrialdesign.foundation/IndustrialWidthClass // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.po4yka.industrialdesign.foundation/IndustrialWidthClass> // com.po4yka.industrialdesign.foundation/IndustrialWidthClass.values|values#static(){}[0]
+}
+
+abstract interface com.po4yka.industrialdesign.foundation/IndustrialExtendedTokens // com.po4yka.industrialdesign.foundation/IndustrialExtendedTokens|null[0]
+
+final class com.po4yka.industrialdesign.components/BarDatum { // com.po4yka.industrialdesign.components/BarDatum|null[0]
+    constructor <init>(kotlin/String, kotlin/Float) // com.po4yka.industrialdesign.components/BarDatum.<init>|<init>(kotlin.String;kotlin.Float){}[0]
+
+    final val label // com.po4yka.industrialdesign.components/BarDatum.label|{}label[0]
+        final fun <get-label>(): kotlin/String // com.po4yka.industrialdesign.components/BarDatum.label.<get-label>|<get-label>(){}[0]
+    final val value // com.po4yka.industrialdesign.components/BarDatum.value|{}value[0]
+        final fun <get-value>(): kotlin/Float // com.po4yka.industrialdesign.components/BarDatum.value.<get-value>|<get-value>(){}[0]
+
+    final fun component1(): kotlin/String // com.po4yka.industrialdesign.components/BarDatum.component1|component1(){}[0]
+    final fun component2(): kotlin/Float // com.po4yka.industrialdesign.components/BarDatum.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Float = ...): com.po4yka.industrialdesign.components/BarDatum // com.po4yka.industrialdesign.components/BarDatum.copy|copy(kotlin.String;kotlin.Float){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.po4yka.industrialdesign.components/BarDatum.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.po4yka.industrialdesign.components/BarDatum.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.po4yka.industrialdesign.components/BarDatum.toString|toString(){}[0]
+}
+
+final class com.po4yka.industrialdesign.components/NavItem { // com.po4yka.industrialdesign.components/NavItem|null[0]
+    constructor <init>(kotlin/String, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>? = ...) // com.po4yka.industrialdesign.components/NavItem.<init>|<init>(kotlin.String;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?){}[0]
+
+    final val icon // com.po4yka.industrialdesign.components/NavItem.icon|{}icon[0]
+        final fun <get-icon>(): kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>? // com.po4yka.industrialdesign.components/NavItem.icon.<get-icon>|<get-icon>(){}[0]
+    final val label // com.po4yka.industrialdesign.components/NavItem.label|{}label[0]
+        final fun <get-label>(): kotlin/String // com.po4yka.industrialdesign.components/NavItem.label.<get-label>|<get-label>(){}[0]
+
+    final fun component1(): kotlin/String // com.po4yka.industrialdesign.components/NavItem.component1|component1(){}[0]
+    final fun component2(): kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>? // com.po4yka.industrialdesign.components/NavItem.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>? = ...): com.po4yka.industrialdesign.components/NavItem // com.po4yka.industrialdesign.components/NavItem.copy|copy(kotlin.String;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.po4yka.industrialdesign.components/NavItem.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.po4yka.industrialdesign.components/NavItem.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.po4yka.industrialdesign.components/NavItem.toString|toString(){}[0]
+}
+
+final class com.po4yka.industrialdesign.components/TableColumn { // com.po4yka.industrialdesign.components/TableColumn|null[0]
+    constructor <init>(kotlin/String, androidx.compose.ui/Alignment.Horizontal = ..., kotlin/Float = ..., kotlin/Boolean = ...) // com.po4yka.industrialdesign.components/TableColumn.<init>|<init>(kotlin.String;androidx.compose.ui.Alignment.Horizontal;kotlin.Float;kotlin.Boolean){}[0]
+
+    final val alignment // com.po4yka.industrialdesign.components/TableColumn.alignment|{}alignment[0]
+        final fun <get-alignment>(): androidx.compose.ui/Alignment.Horizontal // com.po4yka.industrialdesign.components/TableColumn.alignment.<get-alignment>|<get-alignment>(){}[0]
+    final val header // com.po4yka.industrialdesign.components/TableColumn.header|{}header[0]
+        final fun <get-header>(): kotlin/String // com.po4yka.industrialdesign.components/TableColumn.header.<get-header>|<get-header>(){}[0]
+    final val mono // com.po4yka.industrialdesign.components/TableColumn.mono|{}mono[0]
+        final fun <get-mono>(): kotlin/Boolean // com.po4yka.industrialdesign.components/TableColumn.mono.<get-mono>|<get-mono>(){}[0]
+    final val weight // com.po4yka.industrialdesign.components/TableColumn.weight|{}weight[0]
+        final fun <get-weight>(): kotlin/Float // com.po4yka.industrialdesign.components/TableColumn.weight.<get-weight>|<get-weight>(){}[0]
+
+    final fun component1(): kotlin/String // com.po4yka.industrialdesign.components/TableColumn.component1|component1(){}[0]
+    final fun component2(): androidx.compose.ui/Alignment.Horizontal // com.po4yka.industrialdesign.components/TableColumn.component2|component2(){}[0]
+    final fun component3(): kotlin/Float // com.po4yka.industrialdesign.components/TableColumn.component3|component3(){}[0]
+    final fun component4(): kotlin/Boolean // com.po4yka.industrialdesign.components/TableColumn.component4|component4(){}[0]
+    final fun copy(kotlin/String = ..., androidx.compose.ui/Alignment.Horizontal = ..., kotlin/Float = ..., kotlin/Boolean = ...): com.po4yka.industrialdesign.components/TableColumn // com.po4yka.industrialdesign.components/TableColumn.copy|copy(kotlin.String;androidx.compose.ui.Alignment.Horizontal;kotlin.Float;kotlin.Boolean){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.po4yka.industrialdesign.components/TableColumn.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.po4yka.industrialdesign.components/TableColumn.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.po4yka.industrialdesign.components/TableColumn.toString|toString(){}[0]
+}
+
+final class com.po4yka.industrialdesign.foundation/IndustrialWindowSize { // com.po4yka.industrialdesign.foundation/IndustrialWindowSize|null[0]
+    constructor <init>(androidx.compose.ui.unit/Dp, androidx.compose.ui.unit/Dp, com.po4yka.industrialdesign.foundation/IndustrialWidthClass, com.po4yka.industrialdesign.foundation/IndustrialHeightClass) // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.<init>|<init>(androidx.compose.ui.unit.Dp;androidx.compose.ui.unit.Dp;com.po4yka.industrialdesign.foundation.IndustrialWidthClass;com.po4yka.industrialdesign.foundation.IndustrialHeightClass){}[0]
+
+    final val height // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.height|{}height[0]
+        final fun <get-height>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.height.<get-height>|<get-height>(){}[0]
+    final val heightClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.heightClass|{}heightClass[0]
+        final fun <get-heightClass>(): com.po4yka.industrialdesign.foundation/IndustrialHeightClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.heightClass.<get-heightClass>|<get-heightClass>(){}[0]
+    final val width // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.width|{}width[0]
+        final fun <get-width>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.width.<get-width>|<get-width>(){}[0]
+    final val widthClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.widthClass|{}widthClass[0]
+        final fun <get-widthClass>(): com.po4yka.industrialdesign.foundation/IndustrialWidthClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.widthClass.<get-widthClass>|<get-widthClass>(){}[0]
+
+    final fun component1(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.component1|component1(){}[0]
+    final fun component2(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.component2|component2(){}[0]
+    final fun component3(): com.po4yka.industrialdesign.foundation/IndustrialWidthClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.component3|component3(){}[0]
+    final fun component4(): com.po4yka.industrialdesign.foundation/IndustrialHeightClass // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.component4|component4(){}[0]
+    final fun copy(androidx.compose.ui.unit/Dp = ..., androidx.compose.ui.unit/Dp = ..., com.po4yka.industrialdesign.foundation/IndustrialWidthClass = ..., com.po4yka.industrialdesign.foundation/IndustrialHeightClass = ...): com.po4yka.industrialdesign.foundation/IndustrialWindowSize // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.copy|copy(androidx.compose.ui.unit.Dp;androidx.compose.ui.unit.Dp;com.po4yka.industrialdesign.foundation.IndustrialWidthClass;com.po4yka.industrialdesign.foundation.IndustrialHeightClass){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.po4yka.industrialdesign.foundation/IndustrialWindowSize.toString|toString(){}[0]
+}
+
+final object com.po4yka.industrialdesign.foundation/IndustrialA11y { // com.po4yka.industrialdesign.foundation/IndustrialA11y|null[0]
+    final val MinTouchTargetSize // com.po4yka.industrialdesign.foundation/IndustrialA11y.MinTouchTargetSize|{}MinTouchTargetSize[0]
+        final fun <get-MinTouchTargetSize>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialA11y.MinTouchTargetSize.<get-MinTouchTargetSize>|<get-MinTouchTargetSize>(){}[0]
+}
+
+final object com.po4yka.industrialdesign.foundation/IndustrialDensity { // com.po4yka.industrialdesign.foundation/IndustrialDensity|null[0]
+    final val Comfortable // com.po4yka.industrialdesign.foundation/IndustrialDensity.Comfortable|{}Comfortable[0]
+        final fun <get-Comfortable>(): kotlin/Float // com.po4yka.industrialdesign.foundation/IndustrialDensity.Comfortable.<get-Comfortable>|<get-Comfortable>(){}[0]
+    final val Compact // com.po4yka.industrialdesign.foundation/IndustrialDensity.Compact|{}Compact[0]
+        final fun <get-Compact>(): kotlin/Float // com.po4yka.industrialdesign.foundation/IndustrialDensity.Compact.<get-Compact>|<get-Compact>(){}[0]
+    final val Default // com.po4yka.industrialdesign.foundation/IndustrialDensity.Default|{}Default[0]
+        final fun <get-Default>(): kotlin/Float // com.po4yka.industrialdesign.foundation/IndustrialDensity.Default.<get-Default>|<get-Default>(){}[0]
+}
+
+final object com.po4yka.industrialdesign.foundation/IndustrialIconSpec { // com.po4yka.industrialdesign.foundation/IndustrialIconSpec|null[0]
+    final val SizeLg // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeLg|{}SizeLg[0]
+        final fun <get-SizeLg>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeLg.<get-SizeLg>|<get-SizeLg>(){}[0]
+    final val SizeMd // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeMd|{}SizeMd[0]
+        final fun <get-SizeMd>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeMd.<get-SizeMd>|<get-SizeMd>(){}[0]
+    final val SizeSm // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeSm|{}SizeSm[0]
+        final fun <get-SizeSm>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeSm.<get-SizeSm>|<get-SizeSm>(){}[0]
+    final val SizeXl // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeXl|{}SizeXl[0]
+        final fun <get-SizeXl>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.SizeXl.<get-SizeXl>|<get-SizeXl>(){}[0]
+    final val StrokeWidthBold // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthBold|{}StrokeWidthBold[0]
+        final fun <get-StrokeWidthBold>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthBold.<get-StrokeWidthBold>|<get-StrokeWidthBold>(){}[0]
+    final val StrokeWidthDefault // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthDefault|{}StrokeWidthDefault[0]
+        final fun <get-StrokeWidthDefault>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthDefault.<get-StrokeWidthDefault>|<get-StrokeWidthDefault>(){}[0]
+    final val StrokeWidthThin // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthThin|{}StrokeWidthThin[0]
+        final fun <get-StrokeWidthThin>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign.foundation/IndustrialIconSpec.StrokeWidthThin.<get-StrokeWidthThin>|<get-StrokeWidthThin>(){}[0]
+}
+
+final object com.po4yka.industrialdesign.foundation/IndustrialMotion { // com.po4yka.industrialdesign.foundation/IndustrialMotion|null[0]
+    final const val DurationFast // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationFast|{}DurationFast[0]
+        final fun <get-DurationFast>(): kotlin/Int // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationFast.<get-DurationFast>|<get-DurationFast>(){}[0]
+    final const val DurationMicro // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationMicro|{}DurationMicro[0]
+        final fun <get-DurationMicro>(): kotlin/Int // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationMicro.<get-DurationMicro>|<get-DurationMicro>(){}[0]
+    final const val DurationSlow // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationSlow|{}DurationSlow[0]
+        final fun <get-DurationSlow>(): kotlin/Int // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationSlow.<get-DurationSlow>|<get-DurationSlow>(){}[0]
+    final const val DurationStandard // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationStandard|{}DurationStandard[0]
+        final fun <get-DurationStandard>(): kotlin/Int // com.po4yka.industrialdesign.foundation/IndustrialMotion.DurationStandard.<get-DurationStandard>|<get-DurationStandard>(){}[0]
+
+    final val Decelerate // com.po4yka.industrialdesign.foundation/IndustrialMotion.Decelerate|{}Decelerate[0]
+        final fun <get-Decelerate>(): androidx.compose.animation.core/Easing // com.po4yka.industrialdesign.foundation/IndustrialMotion.Decelerate.<get-Decelerate>|<get-Decelerate>(){}[0]
+    final val EaseOut // com.po4yka.industrialdesign.foundation/IndustrialMotion.EaseOut|{}EaseOut[0]
+        final fun <get-EaseOut>(): androidx.compose.animation.core/Easing // com.po4yka.industrialdesign.foundation/IndustrialMotion.EaseOut.<get-EaseOut>|<get-EaseOut>(){}[0]
+    final val Linear // com.po4yka.industrialdesign.foundation/IndustrialMotion.Linear|{}Linear[0]
+        final fun <get-Linear>(): androidx.compose.animation.core/Easing // com.po4yka.industrialdesign.foundation/IndustrialMotion.Linear.<get-Linear>|<get-Linear>(){}[0]
+}
+
+final object com.po4yka.industrialdesign.resources/Res { // com.po4yka.industrialdesign.resources/Res|null[0]
+    final fun getUri(kotlin/String): kotlin/String // com.po4yka.industrialdesign.resources/Res.getUri|getUri(kotlin.String){}[0]
+    final suspend fun readBytes(kotlin/String): kotlin/ByteArray // com.po4yka.industrialdesign.resources/Res.readBytes|readBytes(kotlin.String){}[0]
+
+    final object array // com.po4yka.industrialdesign.resources/Res.array|null[0]
+
+    final object drawable // com.po4yka.industrialdesign.resources/Res.drawable|null[0]
+
+    final object font // com.po4yka.industrialdesign.resources/Res.font|null[0]
+
+    final object plurals // com.po4yka.industrialdesign.resources/Res.plurals|null[0]
+
+    final object string // com.po4yka.industrialdesign.resources/Res.string|null[0]
+}
+
+final object com.po4yka.industrialdesign/IndustrialTokens { // com.po4yka.industrialdesign/IndustrialTokens|null[0]
+    final object Accent { // com.po4yka.industrialdesign/IndustrialTokens.Accent|null[0]
+        final val Interactive // com.po4yka.industrialdesign/IndustrialTokens.Accent.Interactive|{}Interactive[0]
+            final fun <get-Interactive>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.Interactive.<get-Interactive>|<get-Interactive>(){}[0]
+        final val InteractiveLight // com.po4yka.industrialdesign/IndustrialTokens.Accent.InteractiveLight|{}InteractiveLight[0]
+            final fun <get-InteractiveLight>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.InteractiveLight.<get-InteractiveLight>|<get-InteractiveLight>(){}[0]
+        final val Signal // com.po4yka.industrialdesign/IndustrialTokens.Accent.Signal|{}Signal[0]
+            final fun <get-Signal>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.Signal.<get-Signal>|<get-Signal>(){}[0]
+        final val SignalSubtle // com.po4yka.industrialdesign/IndustrialTokens.Accent.SignalSubtle|{}SignalSubtle[0]
+            final fun <get-SignalSubtle>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.SignalSubtle.<get-SignalSubtle>|<get-SignalSubtle>(){}[0]
+        final val Success // com.po4yka.industrialdesign/IndustrialTokens.Accent.Success|{}Success[0]
+            final fun <get-Success>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.Success.<get-Success>|<get-Success>(){}[0]
+        final val Warning // com.po4yka.industrialdesign/IndustrialTokens.Accent.Warning|{}Warning[0]
+            final fun <get-Warning>(): androidx.compose.ui.graphics/Color // com.po4yka.industrialdesign/IndustrialTokens.Accent.Warning.<get-Warning>|<get-Warning>(){}[0]
+    }
+
+    final object Motion { // com.po4yka.industrialdesign/IndustrialTokens.Motion|null[0]
+        final const val MicroDurationMillis // com.po4yka.industrialdesign/IndustrialTokens.Motion.MicroDurationMillis|{}MicroDurationMillis[0]
+            final fun <get-MicroDurationMillis>(): kotlin/Int // com.po4yka.industrialdesign/IndustrialTokens.Motion.MicroDurationMillis.<get-MicroDurationMillis>|<get-MicroDurationMillis>(){}[0]
+        final const val TransitionDurationMillis // com.po4yka.industrialdesign/IndustrialTokens.Motion.TransitionDurationMillis|{}TransitionDurationMillis[0]
+            final fun <get-TransitionDurationMillis>(): kotlin/Int // com.po4yka.industrialdesign/IndustrialTokens.Motion.TransitionDurationMillis.<get-TransitionDurationMillis>|<get-TransitionDurationMillis>(){}[0]
+
+        final val Easing // com.po4yka.industrialdesign/IndustrialTokens.Motion.Easing|{}Easing[0]
+            final fun <get-Easing>(): androidx.compose.animation.core/Easing // com.po4yka.industrialdesign/IndustrialTokens.Motion.Easing.<get-Easing>|<get-Easing>(){}[0]
+    }
+
+    final object Radius { // com.po4yka.industrialdesign/IndustrialTokens.Radius|null[0]
+        final val Card // com.po4yka.industrialdesign/IndustrialTokens.Radius.Card|{}Card[0]
+            final fun <get-Card>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Radius.Card.<get-Card>|<get-Card>(){}[0]
+        final val Compact // com.po4yka.industrialdesign/IndustrialTokens.Radius.Compact|{}Compact[0]
+            final fun <get-Compact>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Radius.Compact.<get-Compact>|<get-Compact>(){}[0]
+        final val Pill // com.po4yka.industrialdesign/IndustrialTokens.Radius.Pill|{}Pill[0]
+            final fun <get-Pill>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Radius.Pill.<get-Pill>|<get-Pill>(){}[0]
+        final val Technical // com.po4yka.industrialdesign/IndustrialTokens.Radius.Technical|{}Technical[0]
+            final fun <get-Technical>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Radius.Technical.<get-Technical>|<get-Technical>(){}[0]
+    }
+
+    final object Spacing { // com.po4yka.industrialdesign/IndustrialTokens.Spacing|null[0]
+        final val lg // com.po4yka.industrialdesign/IndustrialTokens.Spacing.lg|{}lg[0]
+            final fun <get-lg>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.lg.<get-lg>|<get-lg>(){}[0]
+        final val md // com.po4yka.industrialdesign/IndustrialTokens.Spacing.md|{}md[0]
+            final fun <get-md>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.md.<get-md>|<get-md>(){}[0]
+        final val sm // com.po4yka.industrialdesign/IndustrialTokens.Spacing.sm|{}sm[0]
+            final fun <get-sm>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.sm.<get-sm>|<get-sm>(){}[0]
+        final val xl // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl|{}xl[0]
+            final fun <get-xl>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl.<get-xl>|<get-xl>(){}[0]
+        final val xl2 // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl2|{}xl2[0]
+            final fun <get-xl2>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl2.<get-xl2>|<get-xl2>(){}[0]
+        final val xl3 // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl3|{}xl3[0]
+            final fun <get-xl3>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl3.<get-xl3>|<get-xl3>(){}[0]
+        final val xl4 // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl4|{}xl4[0]
+            final fun <get-xl4>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xl4.<get-xl4>|<get-xl4>(){}[0]
+        final val xs // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xs|{}xs[0]
+            final fun <get-xs>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xs.<get-xs>|<get-xs>(){}[0]
+        final val xs2 // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xs2|{}xs2[0]
+            final fun <get-xs2>(): androidx.compose.ui.unit/Dp // com.po4yka.industrialdesign/IndustrialTokens.Spacing.xs2.<get-xs2>|<get-xs2>(){}[0]
+    }
+}
+
+final val com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_BarDatum$stableprop // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_BarDatum$stableprop|#static{}com_po4yka_industrialdesign_components_BarDatum$stableprop[0]
+final val com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_NavItem$stableprop // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_NavItem$stableprop|#static{}com_po4yka_industrialdesign_components_NavItem$stableprop[0]
+final val com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_TableColumn$stableprop // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_TableColumn$stableprop|#static{}com_po4yka_industrialdesign_components_TableColumn$stableprop[0]
+final val com.po4yka.industrialdesign.foundation/LocalIndustrialDensity // com.po4yka.industrialdesign.foundation/LocalIndustrialDensity|{}LocalIndustrialDensity[0]
+    final fun <get-LocalIndustrialDensity>(): androidx.compose.runtime/ProvidableCompositionLocal<kotlin/Float> // com.po4yka.industrialdesign.foundation/LocalIndustrialDensity.<get-LocalIndustrialDensity>|<get-LocalIndustrialDensity>(){}[0]
+final val com.po4yka.industrialdesign.foundation/LocalIndustrialExtendedTokens // com.po4yka.industrialdesign.foundation/LocalIndustrialExtendedTokens|{}LocalIndustrialExtendedTokens[0]
+    final fun <get-LocalIndustrialExtendedTokens>(): androidx.compose.runtime/ProvidableCompositionLocal<com.po4yka.industrialdesign.foundation/IndustrialExtendedTokens?> // com.po4yka.industrialdesign.foundation/LocalIndustrialExtendedTokens.<get-LocalIndustrialExtendedTokens>|<get-LocalIndustrialExtendedTokens>(){}[0]
+final val com.po4yka.industrialdesign.foundation/LocalReducedMotion // com.po4yka.industrialdesign.foundation/LocalReducedMotion|{}LocalReducedMotion[0]
+    final fun <get-LocalReducedMotion>(): androidx.compose.runtime/ProvidableCompositionLocal<kotlin/Boolean> // com.po4yka.industrialdesign.foundation/LocalReducedMotion.<get-LocalReducedMotion>|<get-LocalReducedMotion>(){}[0]
+final val com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop|#static{}com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop[0]
+final val com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop|#static{}com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop[0]
+final val com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop|#static{}com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop[0]
+final val com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop|#static{}com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop[0]
+final val com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop|#static{}com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop[0]
+final val com.po4yka.industrialdesign.resources/OFL // com.po4yka.industrialdesign.resources/OFL|@com.po4yka.industrialdesign.resources.Res.font{}OFL[0]
+    final fun (com.po4yka.industrialdesign.resources/Res.font).<get-OFL>(): org.jetbrains.compose.resources/FontResource // com.po4yka.industrialdesign.resources/OFL.<get-OFL>|<get-OFL>@com.po4yka.industrialdesign.resources.Res.font(){}[0]
+final val com.po4yka.industrialdesign.resources/allDrawableResources // com.po4yka.industrialdesign.resources/allDrawableResources|@com.po4yka.industrialdesign.resources.Res{}allDrawableResources[0]
+    final fun (com.po4yka.industrialdesign.resources/Res).<get-allDrawableResources>(): kotlin.collections/Map<kotlin/String, org.jetbrains.compose.resources/DrawableResource> // com.po4yka.industrialdesign.resources/allDrawableResources.<get-allDrawableResources>|<get-allDrawableResources>@com.po4yka.industrialdesign.resources.Res(){}[0]
+final val com.po4yka.industrialdesign.resources/allFontResources // com.po4yka.industrialdesign.resources/allFontResources|@com.po4yka.industrialdesign.resources.Res{}allFontResources[0]
+    final fun (com.po4yka.industrialdesign.resources/Res).<get-allFontResources>(): kotlin.collections/Map<kotlin/String, org.jetbrains.compose.resources/FontResource> // com.po4yka.industrialdesign.resources/allFontResources.<get-allFontResources>|<get-allFontResources>@com.po4yka.industrialdesign.resources.Res(){}[0]
+final val com.po4yka.industrialdesign.resources/allPluralStringResources // com.po4yka.industrialdesign.resources/allPluralStringResources|@com.po4yka.industrialdesign.resources.Res{}allPluralStringResources[0]
+    final fun (com.po4yka.industrialdesign.resources/Res).<get-allPluralStringResources>(): kotlin.collections/Map<kotlin/String, org.jetbrains.compose.resources/PluralStringResource> // com.po4yka.industrialdesign.resources/allPluralStringResources.<get-allPluralStringResources>|<get-allPluralStringResources>@com.po4yka.industrialdesign.resources.Res(){}[0]
+final val com.po4yka.industrialdesign.resources/allStringArrayResources // com.po4yka.industrialdesign.resources/allStringArrayResources|@com.po4yka.industrialdesign.resources.Res{}allStringArrayResources[0]
+    final fun (com.po4yka.industrialdesign.resources/Res).<get-allStringArrayResources>(): kotlin.collections/Map<kotlin/String, org.jetbrains.compose.resources/StringArrayResource> // com.po4yka.industrialdesign.resources/allStringArrayResources.<get-allStringArrayResources>|<get-allStringArrayResources>@com.po4yka.industrialdesign.resources.Res(){}[0]
+final val com.po4yka.industrialdesign.resources/allStringResources // com.po4yka.industrialdesign.resources/allStringResources|@com.po4yka.industrialdesign.resources.Res{}allStringResources[0]
+    final fun (com.po4yka.industrialdesign.resources/Res).<get-allStringResources>(): kotlin.collections/Map<kotlin/String, org.jetbrains.compose.resources/StringResource> // com.po4yka.industrialdesign.resources/allStringResources.<get-allStringResources>|<get-allStringResources>@com.po4yka.industrialdesign.resources.Res(){}[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res$stableprop|#static{}com_po4yka_industrialdesign_resources_Res$stableprop[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_array$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_array$stableprop|#static{}com_po4yka_industrialdesign_resources_Res_array$stableprop[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_drawable$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_drawable$stableprop|#static{}com_po4yka_industrialdesign_resources_Res_drawable$stableprop[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_font$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_font$stableprop|#static{}com_po4yka_industrialdesign_resources_Res_font$stableprop[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_plurals$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_plurals$stableprop|#static{}com_po4yka_industrialdesign_resources_Res_plurals$stableprop[0]
+final val com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_string$stableprop // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_string$stableprop|#static{}com_po4yka_industrialdesign_resources_Res_string$stableprop[0]
+final val com.po4yka.industrialdesign.resources/doto // com.po4yka.industrialdesign.resources/doto|@com.po4yka.industrialdesign.resources.Res.font{}doto[0]
+    final fun (com.po4yka.industrialdesign.resources/Res.font).<get-doto>(): org.jetbrains.compose.resources/FontResource // com.po4yka.industrialdesign.resources/doto.<get-doto>|<get-doto>@com.po4yka.industrialdesign.resources.Res.font(){}[0]
+final val com.po4yka.industrialdesign.resources/space_grotesk // com.po4yka.industrialdesign.resources/space_grotesk|@com.po4yka.industrialdesign.resources.Res.font{}space_grotesk[0]
+    final fun (com.po4yka.industrialdesign.resources/Res.font).<get-space_grotesk>(): org.jetbrains.compose.resources/FontResource // com.po4yka.industrialdesign.resources/space_grotesk.<get-space_grotesk>|<get-space_grotesk>@com.po4yka.industrialdesign.resources.Res.font(){}[0]
+final val com.po4yka.industrialdesign.resources/space_mono_bold // com.po4yka.industrialdesign.resources/space_mono_bold|@com.po4yka.industrialdesign.resources.Res.font{}space_mono_bold[0]
+    final fun (com.po4yka.industrialdesign.resources/Res.font).<get-space_mono_bold>(): org.jetbrains.compose.resources/FontResource // com.po4yka.industrialdesign.resources/space_mono_bold.<get-space_mono_bold>|<get-space_mono_bold>@com.po4yka.industrialdesign.resources.Res.font(){}[0]
+final val com.po4yka.industrialdesign.resources/space_mono_regular // com.po4yka.industrialdesign.resources/space_mono_regular|@com.po4yka.industrialdesign.resources.Res.font{}space_mono_regular[0]
+    final fun (com.po4yka.industrialdesign.resources/Res.font).<get-space_mono_regular>(): org.jetbrains.compose.resources/FontResource // com.po4yka.industrialdesign.resources/space_mono_regular.<get-space_mono_regular>|<get-space_mono_regular>@com.po4yka.industrialdesign.resources.Res.font(){}[0]
+final val com.po4yka.industrialdesign/IndustrialDarkColorScheme // com.po4yka.industrialdesign/IndustrialDarkColorScheme|{}IndustrialDarkColorScheme[0]
+    final fun <get-IndustrialDarkColorScheme>(): androidx.compose.material3/ColorScheme // com.po4yka.industrialdesign/IndustrialDarkColorScheme.<get-IndustrialDarkColorScheme>|<get-IndustrialDarkColorScheme>(){}[0]
+final val com.po4yka.industrialdesign/IndustrialLightColorScheme // com.po4yka.industrialdesign/IndustrialLightColorScheme|{}IndustrialLightColorScheme[0]
+    final fun <get-IndustrialLightColorScheme>(): androidx.compose.material3/ColorScheme // com.po4yka.industrialdesign/IndustrialLightColorScheme.<get-IndustrialLightColorScheme>|<get-IndustrialLightColorScheme>(){}[0]
+final val com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens$stableprop // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens$stableprop|#static{}com_po4yka_industrialdesign_IndustrialTokens$stableprop[0]
+final val com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop|#static{}com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop[0]
+final val com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop|#static{}com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop[0]
+final val com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop|#static{}com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop[0]
+final val com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop|#static{}com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop[0]
+
+final fun (androidx.compose.ui/Modifier).com.po4yka.industrialdesign.foundation/industrialSemantics(kotlin/String? = ..., androidx.compose.ui.semantics/Role? = ..., kotlin/String? = ...): androidx.compose.ui/Modifier // com.po4yka.industrialdesign.foundation/industrialSemantics|industrialSemantics@androidx.compose.ui.Modifier(kotlin.String?;androidx.compose.ui.semantics.Role?;kotlin.String?){}[0]
+final fun (androidx.compose.ui/Modifier).com.po4yka.industrialdesign.foundation/minTouchTarget(): androidx.compose.ui/Modifier // com.po4yka.industrialdesign.foundation/minTouchTarget|minTouchTarget@androidx.compose.ui.Modifier(){}[0]
+final fun <#A: kotlin/Any?> com.po4yka.industrialdesign.foundation/industrialTween(kotlin/Int = ..., androidx.compose.animation.core/Easing = ...): androidx.compose.animation.core/TweenSpec<#A> // com.po4yka.industrialdesign.foundation/industrialTween|industrialTween(kotlin.Int;androidx.compose.animation.core.Easing){0§<kotlin.Any?>}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialBackButton(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialBackButton|IndustrialBackButton(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialBarChart(kotlin.collections/List<com.po4yka.industrialdesign.components/BarDatum>, androidx.compose.ui/Modifier?, kotlin/Float, androidx.compose.ui.graphics/Color, androidx.compose.ui.graphics/Color, kotlin/Boolean, androidx.compose.ui.unit/Dp, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialBarChart|IndustrialBarChart(kotlin.collections.List<com.po4yka.industrialdesign.components.BarDatum>;androidx.compose.ui.Modifier?;kotlin.Float;androidx.compose.ui.graphics.Color;androidx.compose.ui.graphics.Color;kotlin.Boolean;androidx.compose.ui.unit.Dp;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialBottomBar(kotlin.collections/List<com.po4yka.industrialdesign.components/NavItem>, kotlin/Int, kotlin/Function1<kotlin/Int, kotlin/Unit>, androidx.compose.ui/Modifier?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialBottomBar|IndustrialBottomBar(kotlin.collections.List<com.po4yka.industrialdesign.components.NavItem>;kotlin.Int;kotlin.Function1<kotlin.Int,kotlin.Unit>;androidx.compose.ui.Modifier?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialBottomSheet(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Function3<androidx.compose.foundation.layout/ColumnScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialBottomSheet|IndustrialBottomSheet(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Function3<androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialCard(androidx.compose.ui/Modifier?, kotlin/Function0<kotlin/Unit>?, kotlin/Boolean, kotlin/Boolean, kotlin/Function3<androidx.compose.foundation.layout/ColumnScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialCard|IndustrialCard(androidx.compose.ui.Modifier?;kotlin.Function0<kotlin.Unit>?;kotlin.Boolean;kotlin.Boolean;kotlin.Function3<androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialCheckbox(kotlin/Boolean, kotlin/Function1<kotlin/Boolean, kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialCheckbox|IndustrialCheckbox(kotlin.Boolean;kotlin.Function1<kotlin.Boolean,kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDestructiveButton(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function3<androidx.compose.foundation.layout/RowScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDestructiveButton|IndustrialDestructiveButton(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function3<androidx.compose.foundation.layout.RowScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDestructiveButton(kotlin/Function0<kotlin/Unit>, kotlin/String, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDestructiveButton|IndustrialDestructiveButton(kotlin.Function0<kotlin.Unit>;kotlin.String;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDial(kotlin/Float, androidx.compose.ui/Modifier?, kotlin/Float, kotlin/Float, kotlin/String?, androidx.compose.ui.unit/Dp, kotlin/Int, androidx.compose.ui.graphics/Color, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDial|IndustrialDial(kotlin.Float;androidx.compose.ui.Modifier?;kotlin.Float;kotlin.Float;kotlin.String?;androidx.compose.ui.unit.Dp;kotlin.Int;androidx.compose.ui.graphics.Color;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDialog(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/String?, androidx.compose.ui.unit/Dp, kotlin/Function3<androidx.compose.foundation.layout/ColumnScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDialog|IndustrialDialog(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.String?;androidx.compose.ui.unit.Dp;kotlin.Function3<androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDotGrid(kotlin/Int, kotlin/Int, kotlin/Function2<kotlin/Int, kotlin/Int, kotlin/Float>, androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDotGrid|IndustrialDotGrid(kotlin.Int;kotlin.Int;kotlin.Function2<kotlin.Int,kotlin.Int,kotlin.Float>;androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialDropdownMenu(kotlin/Boolean, kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Function3<androidx.compose.foundation.layout/ColumnScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialDropdownMenu|IndustrialDropdownMenu(kotlin.Boolean;kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Function3<androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialGhostButton(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function3<androidx.compose.foundation.layout/RowScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialGhostButton|IndustrialGhostButton(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function3<androidx.compose.foundation.layout.RowScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialGhostButton(kotlin/Function0<kotlin/Unit>, kotlin/String, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialGhostButton|IndustrialGhostButton(kotlin.Function0<kotlin.Unit>;kotlin.String;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialHierarchicalRow(kotlin/String, kotlin/String, androidx.compose.ui/Modifier?, kotlin/Int, androidx.compose.ui.graphics/Color, kotlin/String?, com.po4yka.industrialdesign.components/Trend?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialHierarchicalRow|IndustrialHierarchicalRow(kotlin.String;kotlin.String;androidx.compose.ui.Modifier?;kotlin.Int;androidx.compose.ui.graphics.Color;kotlin.String?;com.po4yka.industrialdesign.components.Trend?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialInlineStatus(kotlin/String, androidx.compose.ui/Modifier?, com.po4yka.industrialdesign.components/StatusKind?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialInlineStatus|IndustrialInlineStatus(kotlin.String;androidx.compose.ui.Modifier?;com.po4yka.industrialdesign.components.StatusKind?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialLinearProgress(kotlin/Float, androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialLinearProgress|IndustrialLinearProgress(kotlin.Float;androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialMonoTextField(kotlin/String, kotlin/Function1<kotlin/String, kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/String?, kotlin/String?, kotlin/Boolean, kotlin/Boolean, kotlin/String?, kotlin/Boolean, androidx.compose.foundation.text/KeyboardOptions?, androidx.compose.ui.text.input/VisualTransformation?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialMonoTextField|IndustrialMonoTextField(kotlin.String;kotlin.Function1<kotlin.String,kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.String?;kotlin.String?;kotlin.Boolean;kotlin.Boolean;kotlin.String?;kotlin.Boolean;androidx.compose.foundation.text.KeyboardOptions?;androidx.compose.ui.text.input.VisualTransformation?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialPeriodNav(kotlin/String, kotlin/Function0<kotlin/Unit>, kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Boolean, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialPeriodNav|IndustrialPeriodNav(kotlin.String;kotlin.Function0<kotlin.Unit>;kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Boolean;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialPrimaryButton(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function3<androidx.compose.foundation.layout/RowScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialPrimaryButton|IndustrialPrimaryButton(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function3<androidx.compose.foundation.layout.RowScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialPrimaryButton(kotlin/Function0<kotlin/Unit>, kotlin/String, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialPrimaryButton|IndustrialPrimaryButton(kotlin.Function0<kotlin.Unit>;kotlin.String;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialProgressReadout(kotlin/String, kotlin/String, androidx.compose.ui/Modifier?, kotlin/String?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialProgressReadout|IndustrialProgressReadout(kotlin.String;kotlin.String;androidx.compose.ui.Modifier?;kotlin.String?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialRadialGauge(kotlin/Float, androidx.compose.ui/Modifier?, kotlin.ranges/ClosedFloatingPointRange<kotlin/Float>?, kotlin/Int, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.ui.graphics/Color, kotlin/String?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialRadialGauge|IndustrialRadialGauge(kotlin.Float;androidx.compose.ui.Modifier?;kotlin.ranges.ClosedFloatingPointRange<kotlin.Float>?;kotlin.Int;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.ui.graphics.Color;kotlin.String?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialSecondaryButton(kotlin/Function0<kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function3<androidx.compose.foundation.layout/RowScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialSecondaryButton|IndustrialSecondaryButton(kotlin.Function0<kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function3<androidx.compose.foundation.layout.RowScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialSecondaryButton(kotlin/Function0<kotlin/Unit>, kotlin/String, androidx.compose.ui/Modifier?, kotlin/Boolean, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialSecondaryButton|IndustrialSecondaryButton(kotlin.Function0<kotlin.Unit>;kotlin.String;androidx.compose.ui.Modifier?;kotlin.Boolean;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialSegmentedControl(kotlin.collections/List<kotlin/String>, kotlin/Int, kotlin/Function1<kotlin/Int, kotlin/Unit>, androidx.compose.ui/Modifier?, com.po4yka.industrialdesign.components/ControlShape?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialSegmentedControl|IndustrialSegmentedControl(kotlin.collections.List<kotlin.String>;kotlin.Int;kotlin.Function1<kotlin.Int,kotlin.Unit>;androidx.compose.ui.Modifier?;com.po4yka.industrialdesign.components.ControlShape?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialSegmentedProgressBar(kotlin/Float, androidx.compose.ui/Modifier?, kotlin/Int, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.ui.graphics/Color, androidx.compose.ui.unit/Dp, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialSegmentedProgressBar|IndustrialSegmentedProgressBar(kotlin.Float;androidx.compose.ui.Modifier?;kotlin.Int;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.ui.graphics.Color;androidx.compose.ui.unit.Dp;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialStatRow(kotlin/String, kotlin/String, androidx.compose.ui/Modifier?, androidx.compose.ui.graphics/Color, kotlin/String?, com.po4yka.industrialdesign.components/Trend?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialStatRow|IndustrialStatRow(kotlin.String;kotlin.String;androidx.compose.ui.Modifier?;androidx.compose.ui.graphics.Color;kotlin.String?;com.po4yka.industrialdesign.components.Trend?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialSwitch(kotlin/Boolean, kotlin/Function1<kotlin/Boolean, kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/Boolean, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialSwitch|IndustrialSwitch(kotlin.Boolean;kotlin.Function1<kotlin.Boolean,kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.Boolean;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialTable(kotlin.collections/List<com.po4yka.industrialdesign.components/TableColumn>, kotlin.collections/List<kotlin.collections/List<kotlin/String>>, androidx.compose.ui/Modifier?, kotlin/Int?, kotlin/Function1<kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialTable|IndustrialTable(kotlin.collections.List<com.po4yka.industrialdesign.components.TableColumn>;kotlin.collections.List<kotlin.collections.List<kotlin.String>>;androidx.compose.ui.Modifier?;kotlin.Int?;kotlin.Function1<kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialTag(kotlin/String, androidx.compose.ui/Modifier?, kotlin/Boolean, com.po4yka.industrialdesign.components/TagShape?, kotlin/Function0<kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialTag|IndustrialTag(kotlin.String;androidx.compose.ui.Modifier?;kotlin.Boolean;com.po4yka.industrialdesign.components.TagShape?;kotlin.Function0<kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialTextField(kotlin/String, kotlin/Function1<kotlin/String, kotlin/Unit>, androidx.compose.ui/Modifier?, kotlin/String?, kotlin/String?, kotlin/Boolean, kotlin/Boolean, kotlin/String?, kotlin/Boolean, androidx.compose.foundation.text/KeyboardOptions?, androidx.compose.ui.text.input/VisualTransformation?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialTextField|IndustrialTextField(kotlin.String;kotlin.Function1<kotlin.String,kotlin.Unit>;androidx.compose.ui.Modifier?;kotlin.String?;kotlin.String?;kotlin.Boolean;kotlin.Boolean;kotlin.String?;kotlin.Boolean;androidx.compose.foundation.text.KeyboardOptions?;androidx.compose.ui.text.input.VisualTransformation?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialTopNav(kotlin.collections/List<com.po4yka.industrialdesign.components/NavItem>, kotlin/Int, kotlin/Function1<kotlin/Int, kotlin/Unit>, androidx.compose.ui/Modifier?, com.po4yka.industrialdesign.components/Separator?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialTopNav|IndustrialTopNav(kotlin.collections.List<com.po4yka.industrialdesign.components.NavItem>;kotlin.Int;kotlin.Function1<kotlin.Int,kotlin.Unit>;androidx.compose.ui.Modifier?;com.po4yka.industrialdesign.components.Separator?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/IndustrialWidget(kotlin/String, kotlin/String, androidx.compose.ui/Modifier?, kotlin/String?, kotlin/String?, kotlin/Function3<androidx.compose.foundation.layout/ColumnScope, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.components/IndustrialWidget|IndustrialWidget(kotlin.String;kotlin.String;androidx.compose.ui.Modifier?;kotlin.String?;kotlin.String?;kotlin.Function3<androidx.compose.foundation.layout.ColumnScope,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_BarDatum$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_BarDatum$stableprop_getter|com_po4yka_industrialdesign_components_BarDatum$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_NavItem$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_NavItem$stableprop_getter|com_po4yka_industrialdesign_components_NavItem$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_TableColumn$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.components/com_po4yka_industrialdesign_components_TableColumn$stableprop_getter|com_po4yka_industrialdesign_components_TableColumn$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/IndustrialArrowIcon(com.po4yka.industrialdesign.foundation/ArrowDirection, androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.foundation/IndustrialArrowIcon|IndustrialArrowIcon(com.po4yka.industrialdesign.foundation.ArrowDirection;androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/IndustrialCheckIcon(androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.foundation/IndustrialCheckIcon|IndustrialCheckIcon(androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/IndustrialCloseIcon(androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.foundation/IndustrialCloseIcon|IndustrialCloseIcon(androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/IndustrialDotIcon(androidx.compose.ui/Modifier?, androidx.compose.ui.unit/Dp, androidx.compose.ui.graphics/Color, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign.foundation/IndustrialDotIcon|IndustrialDotIcon(androidx.compose.ui.Modifier?;androidx.compose.ui.unit.Dp;androidx.compose.ui.graphics.Color;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/ProvideIndustrialExtended(com.po4yka.industrialdesign.foundation/IndustrialExtendedTokens, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int) // com.po4yka.industrialdesign.foundation/ProvideIndustrialExtended|ProvideIndustrialExtended(com.po4yka.industrialdesign.foundation.IndustrialExtendedTokens;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/calibrateForFontScale(androidx.compose.runtime/Composer?, kotlin/Int): kotlin/Float // com.po4yka.industrialdesign.foundation/calibrateForFontScale|calibrateForFontScale(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop_getter|com_po4yka_industrialdesign_foundation_IndustrialA11y$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop_getter|com_po4yka_industrialdesign_foundation_IndustrialDensity$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop_getter|com_po4yka_industrialdesign_foundation_IndustrialIconSpec$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop_getter|com_po4yka_industrialdesign_foundation_IndustrialMotion$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.foundation/com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop_getter|com_po4yka_industrialdesign_foundation_IndustrialWindowSize$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.foundation/rememberIndustrialWindowSize(androidx.compose.runtime/Composer?, kotlin/Int): com.po4yka.industrialdesign.foundation/IndustrialWindowSize // com.po4yka.industrialdesign.foundation/rememberIndustrialWindowSize|rememberIndustrialWindowSize(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.foundation/rememberReducedMotion(androidx.compose.runtime/Composer?, kotlin/Int): kotlin/Boolean // com.po4yka.industrialdesign.foundation/rememberReducedMotion|rememberReducedMotion(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res$stableprop_getter|com_po4yka_industrialdesign_resources_Res$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_array$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_array$stableprop_getter|com_po4yka_industrialdesign_resources_Res_array$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_drawable$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_drawable$stableprop_getter|com_po4yka_industrialdesign_resources_Res_drawable$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_font$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_font$stableprop_getter|com_po4yka_industrialdesign_resources_Res_font$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_plurals$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_plurals$stableprop_getter|com_po4yka_industrialdesign_resources_Res_plurals$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_string$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign.resources/com_po4yka_industrialdesign_resources_Res_string$stableprop_getter|com_po4yka_industrialdesign_resources_Res_string$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign/IndustrialTheme(kotlin/Boolean, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // com.po4yka.industrialdesign/IndustrialTheme|IndustrialTheme(kotlin.Boolean;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign/IndustrialTypography(androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.material3/Typography // com.po4yka.industrialdesign/IndustrialTypography|IndustrialTypography(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens$stableprop_getter|com_po4yka_industrialdesign_IndustrialTokens$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop_getter|com_po4yka_industrialdesign_IndustrialTokens_Accent$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop_getter|com_po4yka_industrialdesign_IndustrialTokens_Motion$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop_getter|com_po4yka_industrialdesign_IndustrialTokens_Radius$stableprop_getter(){}[0]
+final fun com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop_getter(): kotlin/Int // com.po4yka.industrialdesign/com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop_getter|com_po4yka_industrialdesign_IndustrialTokens_Spacing$stableprop_getter(){}[0]
+final inline fun <#A: reified com.po4yka.industrialdesign.foundation/IndustrialExtendedTokens> com.po4yka.industrialdesign.foundation/industrialExtended(androidx.compose.runtime/Composer?, kotlin/Int): #A // com.po4yka.industrialdesign.foundation/industrialExtended|industrialExtended(androidx.compose.runtime.Composer?;kotlin.Int){0§<com.po4yka.industrialdesign.foundation.IndustrialExtendedTokens>}[0]

@@ -11,6 +11,8 @@ preview-scanner = "0.9.0"
 compose-bom = "2025.05.00"
 activity-compose = "1.10.1"
 junit4 = "4.13.2"
+binary-compatibility-validator = "0.18.1"
+compose-lints = "1.4.3"
 
 [libraries]
 roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }
@@ -26,6 +28,7 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4-android" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
 junit4 = { module = "junit:junit", version.ref = "junit4" }
+compose-lints = { module = "com.slack.lint.compose:compose-lint-checks", version.ref = "compose-lints" }
 
 [plugins]
 android-kmp-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
@@ -38,3 +41,4 @@ vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = 
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 composeai-preview = { id = "ee.schimke.composeai.preview", version.ref = "composeai" }
 roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
+binary-compatibility-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binary-compatibility-validator" }
